@@ -1,22 +1,54 @@
-# 工厂固件
+# ESP32-S3-Touch-LCD-1.47
 
-[English](./README.md)
+[English](README.md) | [简体中文](README_ZH.md)
 
-| 文件 | 用途 |
+ESP32-S3 1.47 英寸 172 × 320 电容触摸显示开发板，搭载 JD9853 SPI 显示控制器、AXS5106L I2C 触摸控制器、16 MB Flash、8 MB PSRAM 和 TF 卡槽。
+
+| 开发框架 | 版本 | 示例数 |
+| --- | --- | ---: |
+| ESP-IDF | v5.5.4 | 5 个 ESP-IDF 工程和 1 个出厂工程 |
+| Arduino-ESP32 | 3.3.11 | 6 个 Arduino 草图 |
+
+## 快速开始
+
+从 [固件目录](firmware/) 下载可直接烧录的镜像，或按单个示例的说明从源码构建。
+
+## 示例
+
+### ESP-IDF
+
+| 示例 | 主要功能 |
 | --- | --- |
-| [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin) | 2025-05-08 出厂恢复固件，从 `0x0` 烧录。 |
+| [01_factory](examples/factory/) | 完整的出厂 LVGL 界面 |
+| [02_sd_card_test](examples/esp-idf/02_sd_card_test/) | SD 卡读写测试 |
+| [03_lvgl_example](examples/esp-idf/03_lvgl_example/) | LVGL 界面和触摸 |
+| [04_lvgl_image](examples/esp-idf/04_lvgl_image/) | LVGL 图片显示 |
+| [05_lvgl_sd_image](examples/esp-idf/05_lvgl_sd_image/) | 从 TF 卡加载 LVGL 图片 |
 
-烧录前：
+### Arduino
 
-- 备份必须保留的设备专用数据。
-- 确认开发板型号和硬件版本。
-- 使用与该镜像对应的产品文档给出的烧录偏移和流程，不要从源码构建结果推断产品镜像。
-- 不要把这一镜像与其他项目构建的 bootloader 或分区文件混用。
+| 示例 | 主要功能 |
+| --- | --- |
+| [01_gfx_helloworld](examples/arduino/examples/01_gfx_helloworld/) | Arduino_GFX 显示和文字 |
+| [02_sd_card_test](examples/arduino/examples/02_sd_card_test/) | TF 卡访问 |
+| [03_lvgl_arduino_v8](examples/arduino/examples/03_lvgl_arduino_v8/) | LVGL v8 界面 |
+| [04_lvgl_battery](examples/arduino/examples/04_lvgl_battery/) | 电池信息界面 |
+| [05_lvgl_brightness](examples/arduino/examples/05_lvgl_brightness/) | 背光亮度界面 |
+| [06_lvgl_image](examples/arduino/examples/06_lvgl_image/) | LVGL 图片显示 |
 
-本镜像已经使用 Flash Download Tool 在对应产品上完成实物验证。SHA-256：`E582744F9E1AEBC7550F46F4B5B221CC184D1EAD3FC8C28201B5A550AB020BE9`。
+草图使用的库随仓库提供，位于 [examples/arduino/libraries](examples/arduino/libraries/)。
 
-工厂固件与源码构建固件的区别见[固件指南](https://github.com/waveshareteam/esp32-repo-template/blob/main/docs/spec.md)。
+## 资料
 
-## 更新工厂镜像
+- [产品页](https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm)
+- [产品 Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
+- [中文文档](https://docs.waveshare.net/ESP32-S3-Touch-LCD-1.47/)
 
-工厂二进制替换属于开发操作。请在 Pull Request 中记录其来源、预期硬件版本、烧录流程、校验值和用户可见版本。绝不能使用无关的本地构建覆盖现有镜像。
+## 支持
+
+- 示例或仓库问题：[提交 issue](https://gitee.com/waveshare/ESP32-S3-Touch-LCD-1.47/issues)。
+- 产品使用、硬件或订单问题：[微雪技术支持](https://service.waveshare.com/)。
+
+## 许可证
+
+Apache License 2.0，详见 [LICENSE](LICENSE)。第三方组件保留其目录中的原许可证。
