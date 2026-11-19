@@ -1,0 +1,518 @@
+﻿2026-11-19T13:04:32.6174989Z Current runner version: '2.338.2'
+2026-11-19T13:04:32.6193565Z ##[group]Runner Image Provisioner
+2026-11-19T13:04:32.6194195Z Hosted Compute Agent
+2026-11-19T13:04:32.6194605Z Version: 20261111.635
+2026-11-19T13:04:32.6194989Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-19T13:04:32.6195510Z Build Date: 2026-11-11T01:49:01Z
+2026-11-19T13:04:32.6195947Z Worker ID: {6f4ceabc-9b87-4a6f-8fb1-639803d6818f}
+2026-11-19T13:04:32.6196445Z Region: centralus
+2026-11-19T13:04:32.6196821Z Cloud: Azure
+2026-11-19T13:04:32.6197152Z ##[endgroup]
+2026-11-19T13:04:32.6198011Z ##[group]Operating System
+2026-11-19T13:04:32.6198382Z Ubuntu
+2026-11-19T13:04:32.6198735Z 26.04.1
+2026-11-19T13:04:32.6199104Z LTS
+2026-11-19T13:04:32.6199427Z ##[endgroup]
+2026-11-19T13:04:32.6199827Z ##[group]Runner Image
+2026-11-19T13:04:32.6200190Z Image: ubuntu-26.04
+2026-11-19T13:04:32.6200568Z Version: 20261116.202.1
+2026-11-19T13:04:32.6201391Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-19T13:04:32.6202339Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-19T13:04:32.6203094Z ##[endgroup]
+2026-11-19T13:04:32.6203801Z ##[group]GITHUB_TOKEN Permissions
+2026-11-19T13:04:32.6205097Z Contents: read
+2026-11-19T13:04:32.6205495Z Metadata: read
+2026-11-19T13:04:32.6205857Z ##[endgroup]
+2026-11-19T13:04:32.6207206Z Secret source: Actions
+2026-11-19T13:04:32.6207867Z Cache mode: write
+2026-11-19T13:04:32.6208304Z Prepare workflow directory
+2026-11-19T13:04:32.6593181Z Prepare all required actions
+2026-11-19T13:04:32.6626423Z Getting action download info
+2026-11-19T13:04:32.8749874Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-19T13:04:32.9641940Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-19T13:04:33.1623386Z Uses: waveshareteam/esp32-repo-template/.github/workflows/build.yml@refs/tags/v1 (9751ac6e197395976359ae31e07fdb44cdd71c3a)
+2026-11-19T13:04:33.1627089Z ##[group] Inputs
+2026-11-19T13:04:33.1627486Z   examples: all
+2026-11-19T13:04:33.1627817Z   template_repository: waveshareteam/esp32-repo-template
+2026-11-19T13:04:33.1628269Z   template_ref: v1
+2026-11-19T13:04:33.1628533Z ##[endgroup]
+2026-11-19T13:04:33.1628888Z Complete job name: build / build-factory-firmware
+2026-11-19T13:04:33.2021001Z ##[group]Checking docker version
+2026-11-19T13:04:33.2030317Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-11-19T13:04:33.2746186Z '1.54'
+2026-11-19T13:04:33.2764084Z Docker daemon API version: '1.54'
+2026-11-19T13:04:33.2764559Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-11-19T13:04:33.2913300Z '1.54'
+2026-11-19T13:04:33.2928794Z Docker client API version: '1.54'
+2026-11-19T13:04:33.2932013Z ##[endgroup]
+2026-11-19T13:04:33.2933645Z ##[group]Clean up resources from previous jobs
+2026-11-19T13:04:33.2937283Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=2e7aa2"
+2026-11-19T13:04:33.3072960Z ##[command]/usr/bin/docker network prune --force --filter "label=2e7aa2"
+2026-11-19T13:04:33.3199967Z ##[endgroup]
+2026-11-19T13:04:33.3200292Z ##[group]Create local container network
+2026-11-19T13:04:33.3207266Z ##[command]/usr/bin/docker network create --label 2e7aa2 github_network_bc0df1f3c7a449a99d7998c0ad04ae4b
+2026-11-19T13:04:33.3568100Z 8c8ae2c27e4f61e4788f2fa8b88cb7a8229739580b615049957b0ae412604b5f
+2026-11-19T13:04:33.3588559Z ##[endgroup]
+2026-11-19T13:04:33.3607240Z ##[group]Starting job container
+2026-11-19T13:04:33.3623863Z ##[command]/usr/bin/docker pull espressif/idf:v5.5.4
+2026-11-19T13:04:33.8583611Z v5.5.4: Pulling from espressif/idf
+2026-11-19T13:04:34.1102998Z 4f4fb700ef54: Pulling fs layer
+2026-11-19T13:04:34.1103555Z ecf7503e35ed: Pulling fs layer
+2026-11-19T13:04:34.1103882Z 1f8e733a1328: Pulling fs layer
+2026-11-19T13:04:34.1104237Z 817807f3c64e: Pulling fs layer
+2026-11-19T13:04:34.1104561Z 2646d8c8f613: Pulling fs layer
+2026-11-19T13:04:34.1105150Z c73da58d356c: Pulling fs layer
+2026-11-19T13:04:34.1105511Z 5ab723893d7c: Pulling fs layer
+2026-11-19T13:04:34.1106033Z f003c0ac3458: Pulling fs layer
+2026-11-19T13:04:34.1763582Z ecf7503e35ed: Download complete
+2026-11-19T13:04:34.1764193Z 4f4fb700ef54: Already exists
+2026-11-19T13:04:34.3790264Z f003c0ac3458: Download complete
+2026-11-19T13:04:34.6760455Z 817807f3c64e: Download complete
+2026-11-19T13:04:34.6773690Z f9467eb90e28: Download complete
+2026-11-19T13:04:34.7848638Z 1f8e733a1328: Download complete
+2026-11-19T13:04:36.3793833Z 817807f3c64e: Pull complete
+2026-11-19T13:04:37.1778253Z 2646d8c8f613: Download complete
+2026-11-19T13:04:46.0758692Z 5ab723893d7c: Download complete
+2026-11-19T13:04:49.6808155Z 2646d8c8f613: Pull complete
+2026-11-19T13:04:50.7777450Z 1f8e733a1328: Pull complete
+2026-11-19T13:05:05.6762501Z c73da58d356c: Download complete
+2026-11-19T13:05:15.9794177Z c73da58d356c: Pull complete
+2026-11-19T13:05:35.2782441Z 5ab723893d7c: Pull complete
+2026-11-19T13:05:35.3779743Z f003c0ac3458: Pull complete
+2026-11-19T13:05:36.2770047Z ecf7503e35ed: Pull complete
+2026-11-19T13:05:36.5005194Z 4f4fb700ef54: Pull complete
+2026-11-19T13:05:36.5007009Z Digest: sha256:b9f2d6ea1c19e0c9f7959bdb74a9e3c775642f9d0f3b841937c5fa3363db892b
+2026-11-19T13:05:36.5007428Z Status: Downloaded newer image for espressif/idf:v5.5.4
+2026-11-19T13:05:36.5102443Z docker.io/espressif/idf:v5.5.4
+2026-11-19T13:05:36.5176330Z ##[command]/usr/bin/docker create --name f31f92521cf54a1b9cc380820755252f_espressifidfv554_f8f906 --label 2e7aa2 --workdir /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47 --network github_network_bc0df1f3c7a449a99d7998c0ad04ae4b  -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/usr/local/lib/android":"/host/android" -v "/usr/share/dotnet":"/host/dotnet" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.2/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" espressif/idf:v5.5.4 "-f" "/dev/null"
+2026-11-19T13:05:49.0733986Z ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:05:49.0754108Z ##[command]/usr/bin/docker start ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:05:49.2200126Z ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:05:49.2222432Z ##[command]/usr/bin/docker ps --all --filter id=ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-11-19T13:05:49.2362301Z ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 Up Less than a second
+2026-11-19T13:05:49.2383146Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:05:49.2480973Z GITHUB_ACTIONS=true
+2026-11-19T13:05:49.2481462Z CI=true
+2026-11-19T13:05:49.2481766Z HOME=/github/home
+2026-11-19T13:05:49.2482192Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+2026-11-19T13:05:49.2482794Z IDF_PATH=/opt/esp/idf
+2026-11-19T13:05:49.2483122Z IDF_TOOLS_PATH=/opt/esp
+2026-11-19T13:05:49.2483458Z IDF_GITHUB_ASSETS=
+2026-11-19T13:05:49.2483763Z IDF_PYTHON_CHECK_CONSTRAINTS=no
+2026-11-19T13:05:49.2484088Z IDF_CCACHE_ENABLE=1
+2026-11-19T13:05:49.2500737Z ##[endgroup]
+2026-11-19T13:05:49.2507559Z ##[group]Waiting for all services to be ready
+2026-11-19T13:05:49.2508721Z ##[endgroup]
+2026-11-19T13:05:49.2705603Z ##[group]Run df -h /__w
+2026-11-19T13:05:49.2705854Z [36;1mdf -h /__w[0m
+2026-11-19T13:05:49.2706016Z [36;1mfor dir in /host/android /host/dotnet /__t; do[0m
+2026-11-19T13:05:49.2706217Z [36;1m  find "$dir" -mindepth 1 -delete || true[0m
+2026-11-19T13:05:49.2706375Z [36;1mdone[0m
+2026-11-19T13:05:49.2706672Z [36;1mdf -h /__w[0m
+2026-11-19T13:05:49.2708989Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T13:05:49.2709238Z env:
+2026-11-19T13:05:49.2709365Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:05:49.2709497Z   FACTORY_IDF: v5.5.4
+2026-11-19T13:05:49.2709633Z   PRODUCT: ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:05:49.2709790Z   TARGET: esp32s3
+2026-11-19T13:05:49.2709925Z   BOARD: 
+2026-11-19T13:05:49.2710032Z ##[endgroup]
+2026-11-19T13:05:49.3167055Z Filesystem      Size  Used Avail Use% Mounted on
+2026-11-19T13:05:49.3167380Z /dev/root       145G   70G   75G  49% /__w
+2026-11-19T13:07:14.4746916Z Filesystem      Size  Used Avail Use% Mounted on
+2026-11-19T13:07:14.4747377Z /dev/root       145G   48G   98G  33% /__w
+2026-11-19T13:07:14.4896323Z ##[group]Run actions/checkout@v4
+2026-11-19T13:07:14.4896485Z with:
+2026-11-19T13:07:14.4896627Z   repository: waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.4898052Z   token: ***
+2026-11-19T13:07:14.4898163Z   ssh-strict: true
+2026-11-19T13:07:14.4898290Z   ssh-user: git
+2026-11-19T13:07:14.4898416Z   persist-credentials: true
+2026-11-19T13:07:14.4898545Z   clean: true
+2026-11-19T13:07:14.4898664Z   sparse-checkout-cone-mode: true
+2026-11-19T13:07:14.4898803Z   fetch-depth: 1
+2026-11-19T13:07:14.4898912Z   fetch-tags: false
+2026-11-19T13:07:14.4899024Z   show-progress: true
+2026-11-19T13:07:14.4899141Z   lfs: false
+2026-11-19T13:07:14.4899243Z   submodules: false
+2026-11-19T13:07:14.4899356Z   set-safe-directory: true
+2026-11-19T13:07:14.4899496Z   allow-unsafe-pr-checkout: false
+2026-11-19T13:07:14.4899634Z env:
+2026-11-19T13:07:14.4899748Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:07:14.4899881Z   FACTORY_IDF: v5.5.4
+2026-11-19T13:07:14.4900051Z   PRODUCT: ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.4900193Z   TARGET: esp32s3
+2026-11-19T13:07:14.4900298Z   BOARD: 
+2026-11-19T13:07:14.4900401Z ##[endgroup]
+2026-11-19T13:07:14.4932029Z ##[command]/usr/bin/docker exec  ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 sh -c "cat /etc/*release | grep ^ID"
+2026-11-19T13:07:14.7377972Z Syncing repository: waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.7379242Z ##[group]Getting Git version info
+2026-11-19T13:07:14.7379601Z Working directory is '/__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:07:14.7380121Z [command]/usr/bin/git version
+2026-11-19T13:07:14.7380344Z git version 2.43.0
+2026-11-19T13:07:14.7387045Z ##[endgroup]
+2026-11-19T13:07:14.7403875Z Temporarily overriding HOME='/__w/_temp/d8d062e8-9584-47aa-a44f-88aed017bc90' before making global git config changes
+2026-11-19T13:07:14.7404702Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:07:14.7405458Z [command]/usr/bin/git config --global --add safe.directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.7432359Z Deleting the contents of '/__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:07:14.7433073Z ##[group]Initializing the repository
+2026-11-19T13:07:14.7435393Z [command]/usr/bin/git init /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.7466427Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T13:07:14.7467056Z hint: is subject to change. To configure the initial branch name to use in all
+2026-11-19T13:07:14.7467725Z hint: of your new repositories, which will suppress this warning, call:
+2026-11-19T13:07:14.7468223Z hint: 
+2026-11-19T13:07:14.7468666Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T13:07:14.7469064Z hint: 
+2026-11-19T13:07:14.7469445Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T13:07:14.7470009Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T13:07:14.7470496Z hint: 
+2026-11-19T13:07:14.7470806Z hint: 	git branch -m <name>
+2026-11-19T13:07:14.7476144Z Initialized empty Git repository in /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.git/
+2026-11-19T13:07:14.7483272Z [command]/usr/bin/git remote add origin https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:14.7545909Z ##[endgroup]
+2026-11-19T13:07:14.7546261Z ##[group]Disabling automatic garbage collection
+2026-11-19T13:07:14.7548120Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T13:07:14.7574923Z ##[endgroup]
+2026-11-19T13:07:14.7575565Z ##[group]Setting up auth
+2026-11-19T13:07:14.7579439Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:07:14.7604368Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:07:14.7809157Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:07:14.7844581Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:07:14.8058007Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:07:14.8093853Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:07:14.8285332Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T13:07:14.8325785Z ##[endgroup]
+2026-11-19T13:07:14.8326139Z ##[group]Fetching the repository
+2026-11-19T13:07:14.8334397Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +362275e3ecc262372ae39ac978c820b8677cabe8:refs/remotes/pull/1/merge
+2026-11-19T13:07:16.4235536Z From https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:16.4236084Z  * [new ref]         362275e3ecc262372ae39ac978c820b8677cabe8 -> pull/1/merge
+2026-11-19T13:07:16.4252780Z ##[endgroup]
+2026-11-19T13:07:16.4253167Z ##[group]Determining the checkout info
+2026-11-19T13:07:16.4255188Z ##[endgroup]
+2026-11-19T13:07:16.4259749Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T13:07:16.4300547Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T13:07:16.4333521Z ##[group]Checking out the ref
+2026-11-19T13:07:16.4336800Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-19T13:07:16.7542174Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-19T13:07:16.7542368Z 
+2026-11-19T13:07:16.7542487Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-19T13:07:16.7542916Z changes and commit them, and you can discard any commits you make in this
+2026-11-19T13:07:16.7543167Z state without impacting any branches by switching back to a branch.
+2026-11-19T13:07:16.7543363Z 
+2026-11-19T13:07:16.7543461Z If you want to create a new branch to retain commits you create, you may
+2026-11-19T13:07:16.7543710Z do so (now or later) by using -c with the switch command. Example:
+2026-11-19T13:07:16.7543845Z 
+2026-11-19T13:07:16.7543908Z   git switch -c <new-branch-name>
+2026-11-19T13:07:16.7544004Z 
+2026-11-19T13:07:16.7544067Z Or undo this operation with:
+2026-11-19T13:07:16.7544151Z 
+2026-11-19T13:07:16.7544204Z   git switch -
+2026-11-19T13:07:16.7544279Z 
+2026-11-19T13:07:16.7544396Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-19T13:07:16.7544552Z 
+2026-11-19T13:07:16.7544732Z HEAD is now at 362275e Merge cabc317c4e48441c10439ae0656e75b72b75878e into 28bd773fa38133cc44368f7be04afde238b3cc2b
+2026-11-19T13:07:16.7585824Z ##[endgroup]
+2026-11-19T13:07:16.7628964Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T13:07:16.7657540Z 362275e3ecc262372ae39ac978c820b8677cabe8
+2026-11-19T13:07:16.7841256Z ##[group]Run actions/checkout@v4
+2026-11-19T13:07:16.7841404Z with:
+2026-11-19T13:07:16.7841539Z   repository: waveshareteam/esp32-repo-template
+2026-11-19T13:07:16.7841701Z   ref: v1
+2026-11-19T13:07:16.7841974Z   path: .ci-template
+2026-11-19T13:07:16.7843512Z   token: ***
+2026-11-19T13:07:16.7843623Z   ssh-strict: true
+2026-11-19T13:07:16.7843736Z   ssh-user: git
+2026-11-19T13:07:16.7843850Z   persist-credentials: true
+2026-11-19T13:07:16.7843981Z   clean: true
+2026-11-19T13:07:16.7844099Z   sparse-checkout-cone-mode: true
+2026-11-19T13:07:16.7844238Z   fetch-depth: 1
+2026-11-19T13:07:16.7844354Z   fetch-tags: false
+2026-11-19T13:07:16.7844469Z   show-progress: true
+2026-11-19T13:07:16.7844585Z   lfs: false
+2026-11-19T13:07:16.7844692Z   submodules: false
+2026-11-19T13:07:16.7844809Z   set-safe-directory: true
+2026-11-19T13:07:16.7844949Z   allow-unsafe-pr-checkout: false
+2026-11-19T13:07:16.7845088Z env:
+2026-11-19T13:07:16.7845199Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:07:16.7845363Z   FACTORY_IDF: v5.5.4
+2026-11-19T13:07:16.7845495Z   PRODUCT: ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:16.7845634Z   TARGET: esp32s3
+2026-11-19T13:07:16.7845743Z   BOARD: 
+2026-11-19T13:07:16.7845852Z ##[endgroup]
+2026-11-19T13:07:16.7850235Z ##[command]/usr/bin/docker exec  ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 sh -c "cat /etc/*release | grep ^ID"
+2026-11-19T13:07:16.9070224Z Syncing repository: waveshareteam/esp32-repo-template
+2026-11-19T13:07:16.9070711Z ##[group]Getting Git version info
+2026-11-19T13:07:16.9071148Z Working directory is '/__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template'
+2026-11-19T13:07:16.9107356Z [command]/usr/bin/git version
+2026-11-19T13:07:16.9140093Z git version 2.43.0
+2026-11-19T13:07:16.9158116Z ##[endgroup]
+2026-11-19T13:07:16.9162753Z Temporarily overriding HOME='/__w/_temp/fff681ae-9997-4440-adb2-a2eba21fe626' before making global git config changes
+2026-11-19T13:07:16.9163313Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:07:16.9165547Z [command]/usr/bin/git config --global --add safe.directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:07:16.9191712Z ##[group]Initializing the repository
+2026-11-19T13:07:16.9194814Z [command]/usr/bin/git init /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:07:16.9227980Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T13:07:16.9228552Z hint: is subject to change. To configure the initial branch name to use in all
+2026-11-19T13:07:16.9228974Z hint: of your new repositories, which will suppress this warning, call:
+2026-11-19T13:07:16.9229352Z hint: 
+2026-11-19T13:07:16.9229577Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T13:07:16.9229835Z hint: 
+2026-11-19T13:07:16.9230078Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T13:07:16.9259929Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T13:07:16.9260389Z hint: 
+2026-11-19T13:07:16.9260576Z hint: 	git branch -m <name>
+2026-11-19T13:07:16.9261183Z Initialized empty Git repository in /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template/.git/
+2026-11-19T13:07:16.9262191Z [command]/usr/bin/git remote add origin https://github.com/waveshareteam/esp32-repo-template
+2026-11-19T13:07:16.9304930Z ##[endgroup]
+2026-11-19T13:07:16.9305260Z ##[group]Disabling automatic garbage collection
+2026-11-19T13:07:16.9305514Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T13:07:16.9339111Z ##[endgroup]
+2026-11-19T13:07:16.9339440Z ##[group]Setting up auth
+2026-11-19T13:07:16.9339793Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:07:16.9365245Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:07:16.9585714Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:07:16.9610977Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:07:16.9803333Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:07:16.9836985Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:07:17.0016103Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T13:07:17.0094042Z ##[endgroup]
+2026-11-19T13:07:17.0094481Z ##[group]Fetching the repository
+2026-11-19T13:07:17.0100143Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/v1*:refs/remotes/origin/v1* +refs/tags/v1*:refs/tags/v1*
+2026-11-19T13:07:17.4720617Z From https://github.com/waveshareteam/esp32-repo-template
+2026-11-19T13:07:17.4721008Z  * [new tag]         v1         -> v1
+2026-11-19T13:07:17.4735946Z ##[endgroup]
+2026-11-19T13:07:17.4736235Z ##[group]Determining the checkout info
+2026-11-19T13:07:17.4742094Z [command]/usr/bin/git branch --list --remote origin/v1
+2026-11-19T13:07:17.4776542Z [command]/usr/bin/git tag --list v1
+2026-11-19T13:07:17.4802900Z v1
+2026-11-19T13:07:17.4805178Z ##[endgroup]
+2026-11-19T13:07:17.4808432Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T13:07:17.4848811Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T13:07:17.4880263Z ##[group]Checking out the ref
+2026-11-19T13:07:17.4882885Z [command]/usr/bin/git checkout --progress --force refs/tags/v1
+2026-11-19T13:07:17.4947952Z Note: switching to 'refs/tags/v1'.
+2026-11-19T13:07:17.4948126Z 
+2026-11-19T13:07:17.4948328Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-19T13:07:17.4948630Z changes and commit them, and you can discard any commits you make in this
+2026-11-19T13:07:17.4948916Z state without impacting any branches by switching back to a branch.
+2026-11-19T13:07:17.4949068Z 
+2026-11-19T13:07:17.4949187Z If you want to create a new branch to retain commits you create, you may
+2026-11-19T13:07:17.4949422Z do so (now or later) by using -c with the switch command. Example:
+2026-11-19T13:07:17.4949570Z 
+2026-11-19T13:07:17.4949633Z   git switch -c <new-branch-name>
+2026-11-19T13:07:17.4949730Z 
+2026-11-19T13:07:17.4949787Z Or undo this operation with:
+2026-11-19T13:07:17.4949877Z 
+2026-11-19T13:07:17.4949928Z   git switch -
+2026-11-19T13:07:17.4949993Z 
+2026-11-19T13:07:17.4950116Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-19T13:07:17.4950289Z 
+2026-11-19T13:07:17.4950447Z HEAD is now at 9751ac6 Skip builds for firmware manifest changes (#22)
+2026-11-19T13:07:17.4951372Z ##[endgroup]
+2026-11-19T13:07:17.4992248Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T13:07:17.5021350Z 9751ac6e197395976359ae31e07fdb44cdd71c3a
+2026-11-19T13:07:17.5161512Z ##[group]Run . "$IDF_PATH/export.sh"
+2026-11-19T13:07:17.5161724Z [36;1m. "$IDF_PATH/export.sh"[0m
+2026-11-19T13:07:17.5161869Z [36;1midf.py --version[0m
+2026-11-19T13:07:17.5162003Z [36;1mif [ -n "$BOARD" ]; then[0m
+2026-11-19T13:07:17.5162176Z [36;1m  python -m pip install --upgrade esp-bmgr-assist[0m
+2026-11-19T13:07:17.5162482Z [36;1m  IDF_TARGET="$TARGET" idf.py --preview -C examples/factory -B build/factory_firmware bmgr -b "$BOARD"[0m
+2026-11-19T13:07:17.5162931Z [36;1mfi[0m
+2026-11-19T13:07:17.5163139Z [36;1midf.py --preview -C examples/factory -B build/factory_firmware set-target "$TARGET" build[0m
+2026-11-19T13:07:17.5163379Z [36;1mdf -h /__w[0m
+2026-11-19T13:07:17.5163603Z shell: bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T13:07:17.5163764Z env:
+2026-11-19T13:07:17.5163876Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:07:17.5164008Z   FACTORY_IDF: v5.5.4
+2026-11-19T13:07:17.5164135Z   PRODUCT: ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:17.5164302Z   TARGET: esp32s3
+2026-11-19T13:07:17.5164411Z   BOARD: 
+2026-11-19T13:07:17.5164647Z ##[endgroup]
+2026-11-19T13:07:17.5564704Z Checking "python3" ...
+2026-11-19T13:07:17.5731148Z Python 3.12.3
+2026-11-19T13:07:17.5731410Z "python3" has been detected
+2026-11-19T13:07:17.6920081Z Activating ESP-IDF 5.5
+2026-11-19T13:07:17.6920716Z Setting IDF_PATH to '/opt/esp/idf'.
+2026-11-19T13:07:17.7083562Z * Checking python version ... 3.12.3
+2026-11-19T13:07:17.8901415Z * Checking python dependencies ... OK
+2026-11-19T13:07:17.9532342Z * Deactivating the current ESP-IDF environment (if any) ... OK
+2026-11-19T13:07:18.0696160Z * Establishing a new ESP-IDF environment ... OK
+2026-11-19T13:07:18.0765213Z * Identifying shell ... bash
+2026-11-19T13:07:18.1878493Z * Detecting outdated tools in system ... OK - no outdated tools found
+2026-11-19T13:07:18.1903111Z * Shell completion ... Autocompletion code generated
+2026-11-19T13:07:18.5752196Z 
+2026-11-19T13:07:18.5752949Z Done! You can now compile ESP-IDF projects.
+2026-11-19T13:07:18.5753366Z Go to the project directory and run:
+2026-11-19T13:07:18.5753538Z 
+2026-11-19T13:07:18.5753619Z   idf.py build
+2026-11-19T13:07:20.3221561Z ESP-IDF v5.5.4
+2026-11-19T13:07:20.8853087Z Adding "set-target"'s dependency "fullclean" to list of commands with default set of options.
+2026-11-19T13:07:20.8853413Z Executing action: fullclean
+2026-11-19T13:07:20.8853712Z Build directory '/__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/build/factory_firmware' not found. Nothing to clean.
+2026-11-19T13:07:20.8854010Z Executing action: set-target
+2026-11-19T13:07:20.8854176Z Set Target to: esp32s3, new sdkconfig will be created.
+2026-11-19T13:07:20.8854455Z Running cmake in directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/build/factory_firmware
+2026-11-19T13:07:20.8855093Z Executing "cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/opt/esp/python_env/idf5.5_py3.12_env/bin/python -DESP_PLATFORM=1 -DIDF_TARGET=esp32s3 -DCCACHE_ENABLE=1 /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory"...
+2026-11-19T13:07:20.8855960Z -- Found Git: /usr/bin/git (found version "2.43.0")
+2026-11-19T13:07:21.3269881Z -- Minimal build - OFF
+2026-11-19T13:07:21.3287988Z -- ccache will be used for faster recompilation
+2026-11-19T13:07:21.3580903Z -- The C compiler identification is GNU 14.2.0
+2026-11-19T13:07:21.3872234Z -- The CXX compiler identification is GNU 14.2.0
+2026-11-19T13:07:21.3974071Z -- The ASM compiler identification is GNU
+2026-11-19T13:07:21.3992802Z -- Found assembler: /opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20260121/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc
+2026-11-19T13:07:21.4048382Z -- Detecting C compiler ABI info
+2026-11-19T13:07:21.4384722Z -- Detecting C compiler ABI info - done
+2026-11-19T13:07:21.4463605Z -- Check for working C compiler: /opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20260121/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+2026-11-19T13:07:21.4465515Z -- Detecting C compile features
+2026-11-19T13:07:21.4468973Z -- Detecting C compile features - done
+2026-11-19T13:07:21.4526435Z -- Detecting CXX compiler ABI info
+2026-11-19T13:07:21.4947493Z -- Detecting CXX compiler ABI info - done
+2026-11-19T13:07:21.5037065Z -- Check for working CXX compiler: /opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20260121/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+2026-11-19T13:07:21.5039107Z -- Detecting CXX compile features
+2026-11-19T13:07:21.5044729Z -- Detecting CXX compile features - done
+2026-11-19T13:07:21.5104538Z -- git rev-parse returned 'fatal: detected dubious ownership in repository at '/__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:07:21.5105167Z To add an exception for this directory, call:
+2026-11-19T13:07:21.5105356Z 
+2026-11-19T13:07:21.5105620Z 	git config --global --add safe.directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:07:21.5106091Z -- Could not use 'git describe' to determine PROJECT_VER.
+2026-11-19T13:07:21.5106424Z -- Building ESP-IDF components for target esp32s3
+2026-11-19T13:07:23.6625318Z NOTICE: 
+2026-11-19T13:07:23.6625605Z Following dependencies have new versions available:
+2026-11-19T13:07:23.6626203Z Dependency "espressif/button": "4.1.3" -> "4.2.3"
+2026-11-19T13:07:23.6626416Z Dependency "espressif/cmake_utilities": "1.1.1" -> "1.4.1"
+2026-11-19T13:07:23.6626630Z Dependency "espressif/esp_lcd_touch": "1.1.2" -> "1.2.1"
+2026-11-19T13:07:23.6626832Z Dependency "espressif/esp_lvgl_port": "2.5.0" -> "2.9.0"
+2026-11-19T13:07:23.6627070Z Consider running "idf.py update-dependencies" to update your lock file.
+2026-11-19T13:07:23.6698422Z NOTICE: Updating lock file at /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/dependencies.lock
+2026-11-19T13:07:23.6698923Z NOTICE: Processing 6 dependencies:
+2026-11-19T13:07:23.6699162Z NOTICE: [1/6] espressif/button (4.1.3)
+2026-11-19T13:07:23.7153962Z NOTICE: [2/6] espressif/cmake_utilities (1.1.1)
+2026-11-19T13:07:23.7667299Z NOTICE: [3/6] espressif/esp_lcd_touch (1.1.2)
+2026-11-19T13:07:23.8028284Z NOTICE: [4/6] espressif/esp_lvgl_port (2.5.0)
+2026-11-19T13:07:23.8759090Z NOTICE: [5/6] lvgl/lvgl (8.4.0)
+2026-11-19T13:07:24.4577919Z NOTICE: [6/6] idf (5.5.4)
+2026-11-19T13:07:24.5020482Z CMake Warning at /opt/esp/idf/tools/cmake/build.cmake:629 (message):
+2026-11-19T13:07:24.5020754Z Call Stack (most recent call first):
+2026-11-19T13:07:24.5020951Z   /opt/esp/idf/tools/cmake/project.cmake:752 (idf_build_process)
+2026-11-19T13:07:24.5021147Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:24.5021240Z 
+2026-11-19T13:07:24.5021242Z 
+2026-11-19T13:07:24.5516020Z -- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+2026-11-19T13:07:25.1744783Z -- Project sdkconfig file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig
+2026-11-19T13:07:25.3197533Z Loading defaults file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig.defaults...
+2026-11-19T13:07:25.3415073Z CMake Warning at /opt/esp/idf/tools/cmake/project.cmake:765 (message):
+2026-11-19T13:07:25.3415402Z   Missing kconfig option.  Re-run the build process...
+2026-11-19T13:07:25.3415594Z Call Stack (most recent call first):
+2026-11-19T13:07:25.3415748Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:25.3415835Z 
+2026-11-19T13:07:25.3415837Z 
+2026-11-19T13:07:25.9185445Z NOTICE: Skipping optional dependency: espressif/freetype
+2026-11-19T13:07:25.9356636Z NOTICE: 
+2026-11-19T13:07:25.9356964Z Following dependencies have new versions available:
+2026-11-19T13:07:25.9357323Z Dependency "espressif/button": "4.1.3" -> "4.2.3"
+2026-11-19T13:07:25.9357665Z Dependency "espressif/cmake_utilities": "1.1.1" -> "1.4.1"
+2026-11-19T13:07:25.9358013Z Dependency "espressif/esp_lcd_touch": "1.1.2" -> "1.2.1"
+2026-11-19T13:07:25.9358345Z Dependency "espressif/esp_lvgl_port": "2.5.0" -> "2.9.0"
+2026-11-19T13:07:25.9358705Z Consider running "idf.py update-dependencies" to update your lock file.
+2026-11-19T13:07:25.9428401Z NOTICE: Processing 6 dependencies:
+2026-11-19T13:07:25.9428723Z NOTICE: [1/6] espressif/button (4.1.3)
+2026-11-19T13:07:25.9439419Z NOTICE: [2/6] espressif/cmake_utilities (1.1.1)
+2026-11-19T13:07:25.9448007Z NOTICE: [3/6] espressif/esp_lcd_touch (1.1.2)
+2026-11-19T13:07:25.9456752Z NOTICE: [4/6] espressif/esp_lvgl_port (2.5.0)
+2026-11-19T13:07:25.9465524Z NOTICE: [5/6] lvgl/lvgl (8.4.0)
+2026-11-19T13:07:25.9474378Z NOTICE: [6/6] idf (5.5.4)
+2026-11-19T13:07:25.9928449Z CMake Warning at /opt/esp/idf/tools/cmake/build.cmake:629 (message):
+2026-11-19T13:07:25.9928832Z Call Stack (most recent call first):
+2026-11-19T13:07:25.9929138Z   /opt/esp/idf/tools/cmake/project.cmake:752 (idf_build_process)
+2026-11-19T13:07:25.9929449Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:25.9929600Z 
+2026-11-19T13:07:25.9929605Z 
+2026-11-19T13:07:26.0528498Z -- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+2026-11-19T13:07:26.6646317Z -- Project sdkconfig file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig
+2026-11-19T13:07:26.8090501Z Loading defaults file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig.defaults...
+2026-11-19T13:07:26.8335358Z CMake Warning at /opt/esp/idf/tools/cmake/project.cmake:765 (message):
+2026-11-19T13:07:26.8335658Z   Missing kconfig option.  Re-run the build process...
+2026-11-19T13:07:26.8335843Z Call Stack (most recent call first):
+2026-11-19T13:07:26.8336003Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:26.8336128Z 
+2026-11-19T13:07:26.8336131Z 
+2026-11-19T13:07:27.5808009Z NOTICE: Skipping optional dependency: espressif/freetype
+2026-11-19T13:07:27.6213329Z NOTICE: 
+2026-11-19T13:07:27.6214752Z Following dependencies have new versions available:
+2026-11-19T13:07:27.6216064Z Dependency "espressif/button": "4.1.3" -> "4.2.3"
+2026-11-19T13:07:27.6217739Z Dependency "espressif/cmake_utilities": "1.1.1" -> "1.4.1"
+2026-11-19T13:07:27.6217958Z Dependency "espressif/esp_lcd_touch": "1.1.2" -> "1.2.1"
+2026-11-19T13:07:27.6218162Z Dependency "espressif/esp_lvgl_port": "2.5.0" -> "2.9.0"
+2026-11-19T13:07:27.6219168Z Consider running "idf.py update-dependencies" to update your lock file.
+2026-11-19T13:07:27.6316252Z NOTICE: Processing 6 dependencies:
+2026-11-19T13:07:27.6316524Z NOTICE: [1/6] espressif/button (4.1.3)
+2026-11-19T13:07:27.6327739Z NOTICE: [2/6] espressif/cmake_utilities (1.1.1)
+2026-11-19T13:07:27.6346617Z NOTICE: [3/6] espressif/esp_lcd_touch (1.1.2)
+2026-11-19T13:07:27.6373372Z NOTICE: [4/6] espressif/esp_lvgl_port (2.5.0)
+2026-11-19T13:07:27.6409607Z NOTICE: [5/6] lvgl/lvgl (8.4.0)
+2026-11-19T13:07:27.6440722Z NOTICE: [6/6] idf (5.5.4)
+2026-11-19T13:07:27.9107486Z CMake Warning at /opt/esp/idf/tools/cmake/build.cmake:629 (message):
+2026-11-19T13:07:27.9109283Z   WARNING: The following Kconfig variables were used in "if" clauses, but not
+2026-11-19T13:07:27.9109520Z   found in any Kconfig file:
+2026-11-19T13:07:27.9109618Z 
+2026-11-19T13:07:27.9110409Z       LV_USE_LIBJPEG_TURBO, introduced by espressif/libjpeg-turbo, defined in (unknown)
+2026-11-19T13:07:27.9111379Z       LV_USE_LIBPNG, introduced by espressif/libpng, defined in (unknown)
+2026-11-19T13:07:27.9111624Z       LV_USE_LZ4, introduced by espressif/lz4, defined in (unknown)
+2026-11-19T13:07:27.9111771Z 
+2026-11-19T13:07:27.9111828Z   
+2026-11-19T13:07:27.9113723Z 
+2026-11-19T13:07:27.9113820Z Call Stack (most recent call first):
+2026-11-19T13:07:27.9114954Z   /opt/esp/idf/tools/cmake/project.cmake:752 (idf_build_process)
+2026-11-19T13:07:27.9115646Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:27.9115737Z 
+2026-11-19T13:07:27.9115739Z 
+2026-11-19T13:07:28.0436012Z -- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5 SoCs
+2026-11-19T13:07:29.0548438Z -- Project sdkconfig file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig
+2026-11-19T13:07:29.2083196Z Loading defaults file /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/factory/sdkconfig.defaults...
+2026-11-19T13:07:29.2325075Z CMake Error at /opt/esp/idf/tools/cmake/project.cmake:768 (message):
+2026-11-19T13:07:29.2325756Z   Missing required kconfig option after retry.
+2026-11-19T13:07:29.2325944Z Call Stack (most recent call first):
+2026-11-19T13:07:29.2326120Z   CMakeLists.txt:8 (project)
+2026-11-19T13:07:29.2326217Z 
+2026-11-19T13:07:29.2326220Z 
+2026-11-19T13:07:29.2334511Z -- Configuring incomplete, errors occurred!
+2026-11-19T13:07:29.2606038Z cmake failed with exit code 1, output of the command is in the /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/build/factory_firmware/log/idf_py_stderr_output_427 and /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/build/factory_firmware/log/idf_py_stdout_output_427
+2026-11-19T13:07:29.3304918Z ##[error]Process completed with exit code 2.
+2026-11-19T13:07:29.3394045Z Post job cleanup.
+2026-11-19T13:07:29.3398446Z ##[command]/usr/bin/docker exec  ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 sh -c "cat /etc/*release | grep ^ID"
+2026-11-19T13:07:29.4765402Z [command]/usr/bin/git version
+2026-11-19T13:07:29.4803687Z git version 2.43.0
+2026-11-19T13:07:29.4875305Z Temporarily overriding HOME='/__w/_temp/d37f0d66-0be3-4f14-8b96-d9dcf896d66b' before making global git config changes
+2026-11-19T13:07:29.4876134Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:07:29.4876755Z [command]/usr/bin/git config --global --add safe.directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:07:29.4878762Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:07:29.4891341Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:07:29.5097647Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:07:29.5118952Z http.https://github.com/.extraheader
+2026-11-19T13:07:29.5126851Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-19T13:07:29.5167729Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:07:29.5402861Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:07:29.5443250Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:07:29.5843622Z Post job cleanup.
+2026-11-19T13:07:29.5848251Z ##[command]/usr/bin/docker exec  ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6 sh -c "cat /etc/*release | grep ^ID"
+2026-11-19T13:07:29.7549784Z [command]/usr/bin/git version
+2026-11-19T13:07:29.7613279Z git version 2.43.0
+2026-11-19T13:07:29.7636803Z Temporarily overriding HOME='/__w/_temp/443a6765-fcae-466c-b6a2-7836391ec43b' before making global git config changes
+2026-11-19T13:07:29.7637429Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:07:29.7640574Z [command]/usr/bin/git config --global --add safe.directory /__w/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:07:29.7672266Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:07:29.7704513Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:07:29.7919760Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:07:29.7943937Z http.https://github.com/.extraheader
+2026-11-19T13:07:29.7953309Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-19T13:07:29.7990476Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:07:29.8215921Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:07:29.8264675Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:07:29.8625919Z Stop and remove container: f31f92521cf54a1b9cc380820755252f_espressifidfv554_f8f906
+2026-11-19T13:07:29.8632456Z ##[command]/usr/bin/docker rm --force ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:07:31.9524137Z ca0c156df229b32cd53e255970fd61a2bb38f4adc7ac8b3d3941ca92842074b6
+2026-11-19T13:07:31.9553744Z Remove container network: github_network_bc0df1f3c7a449a99d7998c0ad04ae4b
+2026-11-19T13:07:31.9556772Z ##[command]/usr/bin/docker network rm github_network_bc0df1f3c7a449a99d7998c0ad04ae4b
+2026-11-19T13:07:32.0165482Z github_network_bc0df1f3c7a449a99d7998c0ad04ae4b
+2026-11-19T13:07:32.0227576Z Cleaning up orphan processes
+2026-11-19T13:07:32.0534633Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

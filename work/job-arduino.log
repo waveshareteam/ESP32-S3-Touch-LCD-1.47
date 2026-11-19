@@ -1,0 +1,560 @@
+﻿2026-11-19T13:04:42.8875771Z Current runner version: '2.338.2'
+2026-11-19T13:04:42.8893192Z ##[group]Runner Image Provisioner
+2026-11-19T13:04:42.8893907Z Hosted Compute Agent
+2026-11-19T13:04:42.8894358Z Version: 20261103.629
+2026-11-19T13:04:42.8894848Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-19T13:04:42.8895367Z Build Date: 2026-11-03T17:26:59Z
+2026-11-19T13:04:42.8895865Z Worker ID: {dc89e294-e5ca-4171-8cca-557c053d8dd9}
+2026-11-19T13:04:42.8896364Z Region: us-west-2
+2026-11-19T13:04:42.8896744Z Cloud: AWS
+2026-11-19T13:04:42.8897161Z ##[endgroup]
+2026-11-19T13:04:42.8898033Z ##[group]Operating System
+2026-11-19T13:04:42.8898495Z Ubuntu
+2026-11-19T13:04:42.8898860Z 26.04.1
+2026-11-19T13:04:42.8899204Z LTS
+2026-11-19T13:04:42.8899605Z ##[endgroup]
+2026-11-19T13:04:42.8899995Z ##[group]Runner Image
+2026-11-19T13:04:42.8900410Z Image: ubuntu-26.04
+2026-11-19T13:04:42.8901121Z Version: 20261111.82.6
+2026-11-19T13:04:42.8902078Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.82/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-19T13:04:42.8903162Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.82
+2026-11-19T13:04:42.8903884Z ##[endgroup]
+2026-11-19T13:04:42.8904681Z ##[group]GITHUB_TOKEN Permissions
+2026-11-19T13:04:42.8906367Z Contents: read
+2026-11-19T13:04:42.8906783Z Metadata: read
+2026-11-19T13:04:42.8907171Z ##[endgroup]
+2026-11-19T13:04:42.8908712Z Secret source: Actions
+2026-11-19T13:04:42.8909360Z Cache mode: write
+2026-11-19T13:04:42.8909958Z Prepare workflow directory
+2026-11-19T13:04:42.9172796Z Prepare all required actions
+2026-11-19T13:04:42.9208579Z Getting action download info
+2026-11-19T13:04:43.2648402Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-19T13:04:45.2478972Z Download action repository 'arduino/setup-arduino-cli@v2' (SHA:b3cda96fddef6af6c56b4c5efb5c47e2357935db)
+2026-11-19T13:04:45.5191372Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-19T13:04:45.8881081Z Uses: waveshareteam/esp32-repo-template/.github/workflows/build.yml@refs/tags/v1 (9751ac6e197395976359ae31e07fdb44cdd71c3a)
+2026-11-19T13:04:45.8884416Z ##[group] Inputs
+2026-11-19T13:04:45.8884802Z   examples: all
+2026-11-19T13:04:45.8885149Z   template_repository: waveshareteam/esp32-repo-template
+2026-11-19T13:04:45.8885532Z   template_ref: v1
+2026-11-19T13:04:45.8885817Z ##[endgroup]
+2026-11-19T13:04:45.8886312Z Complete job name: build / build-arduino (01_gfx_helloworld, examples/arduino/examples/01_gfx_helloworld, 01_gfx_helloworld....
+2026-11-19T13:04:45.9421950Z ##[group]Run actions/checkout@v4
+2026-11-19T13:04:45.9422416Z with:
+2026-11-19T13:04:45.9422803Z   repository: waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:45.9424876Z   token: ***
+2026-11-19T13:04:45.9425223Z   ssh-strict: true
+2026-11-19T13:04:45.9425500Z   ssh-user: git
+2026-11-19T13:04:45.9425780Z   persist-credentials: true
+2026-11-19T13:04:45.9426083Z   clean: true
+2026-11-19T13:04:45.9426388Z   sparse-checkout-cone-mode: true
+2026-11-19T13:04:45.9426714Z   fetch-depth: 1
+2026-11-19T13:04:45.9426984Z   fetch-tags: false
+2026-11-19T13:04:45.9427255Z   show-progress: true
+2026-11-19T13:04:45.9427528Z   lfs: false
+2026-11-19T13:04:45.9427780Z   submodules: false
+2026-11-19T13:04:45.9428096Z   set-safe-directory: true
+2026-11-19T13:04:45.9428409Z   allow-unsafe-pr-checkout: false
+2026-11-19T13:04:45.9428800Z env:
+2026-11-19T13:04:45.9429071Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:04:45.9429352Z ##[endgroup]
+2026-11-19T13:04:48.8162273Z Syncing repository: waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:48.8163637Z ##[group]Getting Git version info
+2026-11-19T13:04:48.8164328Z Working directory is '/home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:04:48.8165326Z [command]/usr/bin/git version
+2026-11-19T13:04:48.8165634Z git version 2.56.1
+2026-11-19T13:04:48.8166546Z ##[endgroup]
+2026-11-19T13:04:48.8170537Z Temporarily overriding HOME='/home/runner/work/_temp/2113c912-7769-49a9-acb5-dafc495ea2bc' before making global git config changes
+2026-11-19T13:04:48.8171600Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:04:48.8172247Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:48.8486545Z Deleting the contents of '/home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47'
+2026-11-19T13:04:48.8488183Z ##[group]Initializing the repository
+2026-11-19T13:04:48.8491077Z [command]/usr/bin/git init /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:48.9266355Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T13:04:48.9266936Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-19T13:04:48.9267463Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-19T13:04:48.9267870Z hint: call:
+2026-11-19T13:04:48.9268113Z hint:
+2026-11-19T13:04:48.9268449Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T13:04:48.9268770Z hint:
+2026-11-19T13:04:48.9269051Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T13:04:48.9269561Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T13:04:48.9269902Z hint:
+2026-11-19T13:04:48.9270148Z hint: 	git branch -m <name>
+2026-11-19T13:04:48.9270388Z hint:
+2026-11-19T13:04:48.9270930Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-19T13:04:48.9279219Z Initialized empty Git repository in /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.git/
+2026-11-19T13:04:48.9289962Z [command]/usr/bin/git remote add origin https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:48.9344014Z ##[endgroup]
+2026-11-19T13:04:48.9344641Z ##[group]Disabling automatic garbage collection
+2026-11-19T13:04:48.9346796Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T13:04:48.9367664Z ##[endgroup]
+2026-11-19T13:04:48.9368333Z ##[group]Setting up auth
+2026-11-19T13:04:48.9373402Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:04:48.9394728Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:04:49.1576690Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:04:49.1601420Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:04:49.1775065Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:04:49.1798078Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:04:49.1968206Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T13:04:49.1993627Z ##[endgroup]
+2026-11-19T13:04:49.2001170Z ##[group]Fetching the repository
+2026-11-19T13:04:49.2001903Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +362275e3ecc262372ae39ac978c820b8677cabe8:refs/remotes/pull/1/merge
+2026-11-19T13:04:50.3511093Z From https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:04:50.3511667Z  * [new ref]         362275e3ecc262372ae39ac978c820b8677cabe8 -> pull/1/merge
+2026-11-19T13:04:50.3514279Z ##[endgroup]
+2026-11-19T13:04:50.3514865Z ##[group]Determining the checkout info
+2026-11-19T13:04:50.3516352Z ##[endgroup]
+2026-11-19T13:04:50.3520245Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T13:04:50.3573271Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T13:04:50.3595671Z ##[group]Checking out the ref
+2026-11-19T13:04:50.3598100Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-19T13:04:50.7184199Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-19T13:04:50.7184513Z 
+2026-11-19T13:04:50.7184724Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-19T13:04:50.7185154Z changes and commit them, and you can discard any commits you make in this
+2026-11-19T13:04:50.7185638Z state without impacting any branches by switching back to a branch.
+2026-11-19T13:04:50.7185895Z 
+2026-11-19T13:04:50.7186079Z If you want to create a new branch to retain commits you create, you may
+2026-11-19T13:04:50.7186469Z do so (now or later) by using -c with the switch command. Example:
+2026-11-19T13:04:50.7186702Z 
+2026-11-19T13:04:50.7186810Z   git switch -c <new-branch-name>
+2026-11-19T13:04:50.7187001Z 
+2026-11-19T13:04:50.7187102Z Or undo this operation with:
+2026-11-19T13:04:50.7187317Z 
+2026-11-19T13:04:50.7187422Z   git switch -
+2026-11-19T13:04:50.7187557Z 
+2026-11-19T13:04:50.7187763Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-19T13:04:50.7187993Z 
+2026-11-19T13:04:50.7188295Z HEAD is now at 362275e Merge cabc317c4e48441c10439ae0656e75b72b75878e into 28bd773fa38133cc44368f7be04afde238b3cc2b
+2026-11-19T13:04:50.7258331Z ##[endgroup]
+2026-11-19T13:04:50.7260477Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T13:04:50.7279651Z 362275e3ecc262372ae39ac978c820b8677cabe8
+2026-11-19T13:04:50.7484560Z ##[group]Run actions/checkout@v4
+2026-11-19T13:04:50.7484845Z with:
+2026-11-19T13:04:50.7485097Z   repository: waveshareteam/esp32-repo-template
+2026-11-19T13:04:50.7485526Z   ref: v1
+2026-11-19T13:04:50.7485748Z   path: .ci-template
+2026-11-19T13:04:50.7487635Z   token: ***
+2026-11-19T13:04:50.7487874Z   ssh-strict: true
+2026-11-19T13:04:50.7488091Z   ssh-user: git
+2026-11-19T13:04:50.7488328Z   persist-credentials: true
+2026-11-19T13:04:50.7488589Z   clean: true
+2026-11-19T13:04:50.7488823Z   sparse-checkout-cone-mode: true
+2026-11-19T13:04:50.7489251Z   fetch-depth: 1
+2026-11-19T13:04:50.7489464Z   fetch-tags: false
+2026-11-19T13:04:50.7489676Z   show-progress: true
+2026-11-19T13:04:50.7489935Z   lfs: false
+2026-11-19T13:04:50.7490155Z   submodules: false
+2026-11-19T13:04:50.7490379Z   set-safe-directory: true
+2026-11-19T13:04:50.7490815Z   allow-unsafe-pr-checkout: false
+2026-11-19T13:04:50.7491062Z env:
+2026-11-19T13:04:50.7491379Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:04:50.7491731Z ##[endgroup]
+2026-11-19T13:04:50.8108112Z Syncing repository: waveshareteam/esp32-repo-template
+2026-11-19T13:04:50.8109172Z ##[group]Getting Git version info
+2026-11-19T13:04:50.8109856Z Working directory is '/home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template'
+2026-11-19T13:04:50.8123858Z [command]/usr/bin/git version
+2026-11-19T13:04:50.8151264Z git version 2.56.1
+2026-11-19T13:04:50.8163476Z ##[endgroup]
+2026-11-19T13:04:50.8171824Z Temporarily overriding HOME='/home/runner/work/_temp/dc8608ca-5c58-4e58-9c4e-ffadd3e4431e' before making global git config changes
+2026-11-19T13:04:50.8172758Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:04:50.8174563Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:04:50.8198560Z ##[group]Initializing the repository
+2026-11-19T13:04:50.8202099Z [command]/usr/bin/git init /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:04:50.8225867Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T13:04:50.8226711Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-19T13:04:50.8227532Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-19T13:04:50.8228092Z hint: call:
+2026-11-19T13:04:50.8228509Z hint:
+2026-11-19T13:04:50.8229185Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T13:04:50.8229699Z hint:
+2026-11-19T13:04:50.8230848Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T13:04:50.8231488Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T13:04:50.8232060Z hint:
+2026-11-19T13:04:50.8232386Z hint: 	git branch -m <name>
+2026-11-19T13:04:50.8232715Z hint:
+2026-11-19T13:04:50.8233120Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-19T13:04:50.8233963Z Initialized empty Git repository in /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template/.git/
+2026-11-19T13:04:50.8235332Z [command]/usr/bin/git remote add origin https://github.com/waveshareteam/esp32-repo-template
+2026-11-19T13:04:50.8256995Z ##[endgroup]
+2026-11-19T13:04:50.8257739Z ##[group]Disabling automatic garbage collection
+2026-11-19T13:04:50.8259677Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T13:04:50.8283141Z ##[endgroup]
+2026-11-19T13:04:50.8283813Z ##[group]Setting up auth
+2026-11-19T13:04:50.8292895Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:04:50.8313023Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:04:50.8492256Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:04:50.8513247Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:04:50.8712942Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:04:50.8741777Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:04:50.8914418Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T13:04:50.8938410Z ##[endgroup]
+2026-11-19T13:04:50.8939051Z ##[group]Fetching the repository
+2026-11-19T13:04:50.8945230Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/v1*:refs/remotes/origin/v1* +refs/tags/v1*:refs/tags/v1*
+2026-11-19T13:04:51.2730484Z From https://github.com/waveshareteam/esp32-repo-template
+2026-11-19T13:04:51.2731248Z  * [new tag]         v1         -> v1
+2026-11-19T13:04:51.2734169Z ##[endgroup]
+2026-11-19T13:04:51.2734727Z ##[group]Determining the checkout info
+2026-11-19T13:04:51.2740522Z [command]/usr/bin/git branch --list --remote origin/v1
+2026-11-19T13:04:51.2766133Z [command]/usr/bin/git tag --list v1
+2026-11-19T13:04:51.2790532Z v1
+2026-11-19T13:04:51.2792631Z ##[endgroup]
+2026-11-19T13:04:51.2796566Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T13:04:51.2822160Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T13:04:51.2840939Z ##[group]Checking out the ref
+2026-11-19T13:04:51.2843701Z [command]/usr/bin/git checkout --progress --force refs/tags/v1
+2026-11-19T13:04:51.2886917Z Note: switching to 'refs/tags/v1'.
+2026-11-19T13:04:51.2887251Z 
+2026-11-19T13:04:51.2887969Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-19T13:04:51.2888626Z changes and commit them, and you can discard any commits you make in this
+2026-11-19T13:04:51.2889217Z state without impacting any branches by switching back to a branch.
+2026-11-19T13:04:51.2889663Z 
+2026-11-19T13:04:51.2889969Z If you want to create a new branch to retain commits you create, you may
+2026-11-19T13:04:51.2890455Z do so (now or later) by using -c with the switch command. Example:
+2026-11-19T13:04:51.2891065Z 
+2026-11-19T13:04:51.2891420Z   git switch -c <new-branch-name>
+2026-11-19T13:04:51.2891909Z 
+2026-11-19T13:04:51.2892074Z Or undo this operation with:
+2026-11-19T13:04:51.2892260Z 
+2026-11-19T13:04:51.2892510Z   git switch -
+2026-11-19T13:04:51.2892771Z 
+2026-11-19T13:04:51.2893151Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-19T13:04:51.2893492Z 
+2026-11-19T13:04:51.2893758Z HEAD is now at 9751ac6 Skip builds for firmware manifest changes (#22)
+2026-11-19T13:04:51.2894733Z ##[endgroup]
+2026-11-19T13:04:51.2916950Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T13:04:51.2933416Z 9751ac6e197395976359ae31e07fdb44cdd71c3a
+2026-11-19T13:04:51.3040451Z ##[group]Run arduino/setup-arduino-cli@v2
+2026-11-19T13:04:51.3040954Z with:
+2026-11-19T13:04:51.3041165Z   version: 1.x
+2026-11-19T13:04:51.3042993Z   token: ***
+2026-11-19T13:04:51.3043199Z env:
+2026-11-19T13:04:51.3043436Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:04:51.3043685Z ##[endgroup]
+2026-11-19T13:04:52.1014246Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/5a191c69-c04b-4814-b2d5-a3e40b6cd988 -f /home/runner/work/_temp/5d0b2786-8145-45af-b515-f74b348aa8d3
+2026-11-19T13:04:52.2967447Z ##[group]Run arduino-cli config init --overwrite
+2026-11-19T13:04:52.2967867Z [36;1marduino-cli config init --overwrite[0m
+2026-11-19T13:04:52.2968500Z [36;1marduino-cli config add board_manager.additional_urls https://espressif.github.io/arduino-esp32/package_esp32_index.json[0m
+2026-11-19T13:04:52.2968997Z [36;1marduino-cli core update-index[0m
+2026-11-19T13:04:52.2969300Z [36;1marduino-cli core install esp32:esp32@3.3.11[0m
+2026-11-19T13:04:52.2993201Z shell: /usr/bin/bash -e {0}
+2026-11-19T13:04:52.2993492Z env:
+2026-11-19T13:04:52.2993720Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:04:52.2993977Z ##[endgroup]
+2026-11-19T13:04:52.3332711Z Config file written to: /home/runner/.arduino15/arduino-cli.yaml
+2026-11-19T13:04:52.9355043Z 
+2026-11-19T13:04:52.9753710Z Downloading index: library_index.tar.bz2 0 B / 4.51 MiB    0.00%
+2026-11-19T13:04:52.9754454Z Downloading index: library_index.tar.bz2 downloaded
+2026-11-19T13:04:54.6000409Z 
+2026-11-19T13:04:54.6075581Z Downloading index: package_index.tar.bz2 0 B / 112.61 KiB    0.00%
+2026-11-19T13:04:54.6076094Z Downloading index: package_index.tar.bz2 downloaded
+2026-11-19T13:04:54.6899206Z 
+2026-11-19T13:04:54.6970837Z Downloading index: package_esp32_index.json 0 B / 720.12 KiB    0.00%
+2026-11-19T13:04:54.6971433Z Downloading index: package_esp32_index.json downloaded
+2026-11-19T13:04:54.7101127Z Downloading missing tool builtin:ctags@5.8-arduino12...
+2026-11-19T13:04:54.9249635Z 
+2026-11-19T13:04:54.9482948Z builtin:ctags@5.8-arduino12 0 B / 555.43 KiB    0.00%
+2026-11-19T13:04:54.9483731Z builtin:ctags@5.8-arduino12 downloaded
+2026-11-19T13:04:54.9484294Z Installing builtin:ctags@5.8-arduino12...
+2026-11-19T13:04:55.0428023Z Skipping tool configuration....
+2026-11-19T13:04:55.0428390Z builtin:ctags@5.8-arduino12 installed
+2026-11-19T13:04:55.0428710Z Downloading missing tool builtin:dfu-discovery@0.1.2...
+2026-11-19T13:04:55.3186914Z 
+2026-11-19T13:04:55.3323502Z builtin:dfu-discovery@0.1.2 0 B / 1.65 MiB    0.00%
+2026-11-19T13:04:55.3324002Z builtin:dfu-discovery@0.1.2 downloaded
+2026-11-19T13:04:55.3324640Z Installing builtin:dfu-discovery@0.1.2...
+2026-11-19T13:04:55.3528815Z Skipping tool configuration....
+2026-11-19T13:04:55.3529391Z builtin:dfu-discovery@0.1.2 installed
+2026-11-19T13:04:55.3529792Z Downloading missing tool builtin:mdns-discovery@1.1.0...
+2026-11-19T13:04:55.7178728Z 
+2026-11-19T13:04:55.7519842Z builtin:mdns-discovery@1.1.0 0 B / 3.07 MiB    0.00%
+2026-11-19T13:04:55.7520287Z builtin:mdns-discovery@1.1.0 downloaded
+2026-11-19T13:04:55.7520940Z Installing builtin:mdns-discovery@1.1.0...
+2026-11-19T13:04:55.7861082Z Skipping tool configuration....
+2026-11-19T13:04:55.7861400Z builtin:mdns-discovery@1.1.0 installed
+2026-11-19T13:04:55.7861858Z Downloading missing tool builtin:serial-discovery@1.5.2...
+2026-11-19T13:04:55.9701121Z 
+2026-11-19T13:04:55.9777682Z builtin:serial-discovery@1.5.2 0 B / 2.06 MiB    0.00%
+2026-11-19T13:04:55.9778387Z builtin:serial-discovery@1.5.2 downloaded
+2026-11-19T13:04:55.9778707Z Installing builtin:serial-discovery@1.5.2...
+2026-11-19T13:04:56.0013202Z Skipping tool configuration....
+2026-11-19T13:04:56.0013590Z builtin:serial-discovery@1.5.2 installed
+2026-11-19T13:04:56.0013935Z Downloading missing tool builtin:serial-monitor@0.15.0...
+2026-11-19T13:04:56.2924860Z 
+2026-11-19T13:04:56.3021630Z builtin:serial-monitor@0.15.0 0 B / 2.33 MiB    0.00%
+2026-11-19T13:04:56.3022101Z builtin:serial-monitor@0.15.0 downloaded
+2026-11-19T13:04:56.3022563Z Installing builtin:serial-monitor@0.15.0...
+2026-11-19T13:04:56.3305022Z Skipping tool configuration....
+2026-11-19T13:04:56.3305827Z builtin:serial-monitor@0.15.0 installed
+2026-11-19T13:04:56.6537927Z 
+2026-11-19T13:04:56.6608825Z Downloading index: package_index.tar.bz2 0 B / 112.61 KiB    0.00%
+2026-11-19T13:04:56.6609672Z Downloading index: package_index.tar.bz2 downloaded
+2026-11-19T13:04:56.7362688Z 
+2026-11-19T13:04:56.7434185Z Downloading index: package_esp32_index.json 0 B / 720.12 KiB    0.00%
+2026-11-19T13:04:56.7435059Z Downloading index: package_esp32_index.json downloaded
+2026-11-19T13:04:56.8045731Z Downloading packages...
+2026-11-19T13:04:57.0680208Z 
+2026-11-19T13:04:57.2692580Z esp32:esp-x32@2601 0 B / 318.78 MiB    0.00%
+2026-11-19T13:04:57.4696042Z esp32:esp-x32@2601 0 B / 318.78 MiB    0.00%
+2026-11-19T13:04:57.6697894Z esp32:esp-x32@2601 35.21 MiB / 318.78 MiB   11.05% 00m02s
+2026-11-19T13:04:57.8700077Z esp32:esp-x32@2601 78.87 MiB / 318.78 MiB   24.74% 00m01s
+2026-11-19T13:04:58.0701806Z esp32:esp-x32@2601 123.95 MiB / 318.78 MiB   38.88% 00m01s
+2026-11-19T13:04:58.2702531Z esp32:esp-x32@2601 171.51 MiB / 318.78 MiB   53.80%
+2026-11-19T13:04:58.4705093Z esp32:esp-x32@2601 171.51 MiB / 318.78 MiB   53.80%
+2026-11-19T13:04:58.6704795Z esp32:esp-x32@2601 217.34 MiB / 318.78 MiB   68.18%
+2026-11-19T13:04:58.8705518Z esp32:esp-x32@2601 254.85 MiB / 318.78 MiB   79.95%
+2026-11-19T13:04:59.0063635Z esp32:esp-x32@2601 290.86 MiB / 318.78 MiB   91.24%
+2026-11-19T13:04:59.0064273Z esp32:esp-x32@2601 downloaded
+2026-11-19T13:04:59.2081808Z 
+2026-11-19T13:04:59.4084180Z esp32:xtensa-esp-elf-gdb@17.1_20260402 0 B / 40.68 MiB    0.00%
+2026-11-19T13:04:59.4719249Z esp32:xtensa-esp-elf-gdb@17.1_20260402 0 B / 40.68 MiB    0.00%
+2026-11-19T13:04:59.4719730Z esp32:xtensa-esp-elf-gdb@17.1_20260402 downloaded
+2026-11-19T13:04:59.6713484Z 
+2026-11-19T13:04:59.8716921Z esp32:esp-rv32@2601 0 B / 563.25 MiB    0.00%
+2026-11-19T13:05:00.0719232Z esp32:esp-rv32@2601 0 B / 563.25 MiB    0.00%
+2026-11-19T13:05:00.2719456Z esp32:esp-rv32@2601 39.29 MiB / 563.25 MiB    6.98% 00m04s
+2026-11-19T13:05:00.4721046Z esp32:esp-rv32@2601 80.03 MiB / 563.25 MiB   14.21% 00m03s
+2026-11-19T13:05:00.6721778Z esp32:esp-rv32@2601 122.68 MiB / 563.25 MiB   21.78% 00m02s
+2026-11-19T13:05:00.8722159Z esp32:esp-rv32@2601 164.71 MiB / 563.25 MiB   29.24% 00m02s
+2026-11-19T13:05:01.0724577Z esp32:esp-rv32@2601 164.71 MiB / 563.25 MiB   29.24% 00m01s
+2026-11-19T13:05:01.2725942Z esp32:esp-rv32@2601 206.69 MiB / 563.25 MiB   36.70% 00m02s
+2026-11-19T13:05:01.4726598Z esp32:esp-rv32@2601 252.15 MiB / 563.25 MiB   44.77% 00m01s
+2026-11-19T13:05:01.6728892Z esp32:esp-rv32@2601 299.99 MiB / 563.25 MiB   53.26% 00m01s
+2026-11-19T13:05:01.8729643Z esp32:esp-rv32@2601 344.17 MiB / 563.25 MiB   61.11% 00m01s
+2026-11-19T13:05:02.0730827Z esp32:esp-rv32@2601 344.17 MiB / 563.25 MiB   61.11%
+2026-11-19T13:05:02.2730458Z esp32:esp-rv32@2601 385.18 MiB / 563.25 MiB   68.39%
+2026-11-19T13:05:02.4730941Z esp32:esp-rv32@2601 430.00 MiB / 563.25 MiB   76.34%
+2026-11-19T13:05:02.6731247Z esp32:esp-rv32@2601 476.99 MiB / 563.25 MiB   84.69%
+2026-11-19T13:05:02.8723330Z esp32:esp-rv32@2601 525.98 MiB / 563.25 MiB   93.38%
+2026-11-19T13:05:02.8723718Z esp32:esp-rv32@2601 downloaded
+2026-11-19T13:05:03.0307062Z 
+2026-11-19T13:05:03.2307873Z esp32:riscv32-esp-elf-gdb@17.1_20260402 0 B / 41.05 MiB    0.00%
+2026-11-19T13:05:03.2769868Z esp32:riscv32-esp-elf-gdb@17.1_20260402 0 B / 41.05 MiB    0.00%
+2026-11-19T13:05:03.2770966Z esp32:riscv32-esp-elf-gdb@17.1_20260402 downloaded
+2026-11-19T13:05:03.4527907Z 
+2026-11-19T13:05:03.4682398Z esp32:openocd-esp32@v0.12.0-esp32-20260424 0 B / 2.51 MiB    0.00%
+2026-11-19T13:05:03.4683079Z esp32:openocd-esp32@v0.12.0-esp32-20260424 downloaded
+2026-11-19T13:05:03.6580216Z 
+2026-11-19T13:05:03.8585720Z esp32:esptool_py@5.3.1 0 B / 79.71 MiB    0.00%
+2026-11-19T13:05:04.0587617Z esp32:esptool_py@5.3.1 0 B / 79.71 MiB    0.00%
+2026-11-19T13:05:04.1835297Z esp32:esptool_py@5.3.1 36.49 MiB / 79.71 MiB   45.78%
+2026-11-19T13:05:04.1835881Z esp32:esptool_py@5.3.1 downloaded
+2026-11-19T13:05:04.3461727Z 
+2026-11-19T13:05:04.3464197Z esp32:mkspiffs@0.2.3 0 B / 49.46 KiB    0.00%
+2026-11-19T13:05:04.3464603Z esp32:mkspiffs@0.2.3 downloaded
+2026-11-19T13:05:04.5153259Z 
+2026-11-19T13:05:04.5154637Z esp32:mklittlefs@4.0.2-db0513a 0 B / 52.73 KiB    0.00%
+2026-11-19T13:05:04.5155114Z esp32:mklittlefs@4.0.2-db0513a downloaded
+2026-11-19T13:05:04.7449967Z 
+2026-11-19T13:05:04.7777694Z arduino:dfu-util@0.11.0-arduino5 0 B / 2.18 MiB    0.00%
+2026-11-19T13:05:04.7778320Z arduino:dfu-util@0.11.0-arduino5 downloaded
+2026-11-19T13:05:04.9764111Z 
+2026-11-19T13:05:05.1768258Z esp32:esp32-libs@3.3.11 0 B / 45.32 MiB    0.00%
+2026-11-19T13:05:05.2602946Z esp32:esp32-libs@3.3.11 0 B / 45.32 MiB    0.00%
+2026-11-19T13:05:05.2603341Z esp32:esp32-libs@3.3.11 downloaded
+2026-11-19T13:05:05.4631462Z 
+2026-11-19T13:05:05.6633093Z esp32:esp32c3-libs@3.3.11 0 B / 57.19 MiB    0.00%
+2026-11-19T13:05:05.8078726Z esp32:esp32c3-libs@3.3.11 0 B / 57.19 MiB    0.00%
+2026-11-19T13:05:05.8079183Z esp32:esp32c3-libs@3.3.11 downloaded
+2026-11-19T13:05:05.9995560Z 
+2026-11-19T13:05:06.1998278Z esp32:esp32c5-libs@3.3.11 0 B / 66.94 MiB    0.00%
+2026-11-19T13:05:06.3998931Z esp32:esp32c5-libs@3.3.11 0 B / 66.94 MiB    0.00%
+2026-11-19T13:05:06.4398820Z esp32:esp32c5-libs@3.3.11 35.74 MiB / 66.94 MiB   53.38%
+2026-11-19T13:05:06.4399524Z esp32:esp32c5-libs@3.3.11 downloaded
+2026-11-19T13:05:06.6378446Z 
+2026-11-19T13:05:06.8382320Z esp32:esp32c6-libs@3.3.11 0 B / 65.51 MiB    0.00%
+2026-11-19T13:05:07.0185108Z esp32:esp32c6-libs@3.3.11 0 B / 65.51 MiB    0.00%
+2026-11-19T13:05:07.0185801Z esp32:esp32c6-libs@3.3.11 downloaded
+2026-11-19T13:05:07.2120057Z 
+2026-11-19T13:05:07.4122491Z esp32:esp32h2-libs@3.3.11 0 B / 61.57 MiB    0.00%
+2026-11-19T13:05:07.5457031Z esp32:esp32h2-libs@3.3.11 0 B / 61.57 MiB    0.00%
+2026-11-19T13:05:07.5457438Z esp32:esp32h2-libs@3.3.11 downloaded
+2026-11-19T13:05:07.7267707Z 
+2026-11-19T13:05:07.9269140Z esp32:esp32p4-libs@3.3.11 0 B / 66.87 MiB    0.00%
+2026-11-19T13:05:08.1271305Z esp32:esp32p4-libs@3.3.11 0 B / 66.87 MiB    0.00%
+2026-11-19T13:05:08.1423434Z esp32:esp32p4-libs@3.3.11 40.86 MiB / 66.87 MiB   61.10%
+2026-11-19T13:05:08.1423829Z esp32:esp32p4-libs@3.3.11 downloaded
+2026-11-19T13:05:08.3553730Z 
+2026-11-19T13:05:08.5555936Z esp32:esp32p4_es-libs@3.3.11 0 B / 66.46 MiB    0.00%
+2026-11-19T13:05:08.7555827Z esp32:esp32p4_es-libs@3.3.11 0 B / 66.46 MiB    0.00%
+2026-11-19T13:05:08.8463599Z esp32:esp32p4_es-libs@3.3.11 40.12 MiB / 66.46 MiB   60.38%
+2026-11-19T13:05:08.8464143Z esp32:esp32p4_es-libs@3.3.11 downloaded
+2026-11-19T13:05:09.0347911Z 
+2026-11-19T13:05:09.2350339Z esp32:esp32s2-libs@3.3.11 0 B / 43.32 MiB    0.00%
+2026-11-19T13:05:09.4352341Z esp32:esp32s2-libs@3.3.11 0 B / 43.32 MiB    0.00%
+2026-11-19T13:05:09.4987729Z esp32:esp32s2-libs@3.3.11 22.66 MiB / 43.32 MiB   52.31%
+2026-11-19T13:05:09.4988129Z esp32:esp32s2-libs@3.3.11 downloaded
+2026-11-19T13:05:09.7074546Z 
+2026-11-19T13:05:09.9077176Z esp32:esp32s3-libs@3.3.11 0 B / 66.83 MiB    0.00%
+2026-11-19T13:05:10.1079314Z esp32:esp32s3-libs@3.3.11 0 B / 66.83 MiB    0.00%
+2026-11-19T13:05:10.3080602Z esp32:esp32s3-libs@3.3.11 25.70 MiB / 66.83 MiB   38.46%
+2026-11-19T13:05:10.3348376Z esp32:esp32s3-libs@3.3.11 52.47 MiB / 66.83 MiB   78.52%
+2026-11-19T13:05:10.3348803Z esp32:esp32s3-libs@3.3.11 downloaded
+2026-11-19T13:05:10.5223163Z 
+2026-11-19T13:05:10.7224672Z esp32:esp32@3.3.11 0 B / 44.73 MiB    0.00%
+2026-11-19T13:05:10.8941229Z esp32:esp32@3.3.11 0 B / 44.73 MiB    0.00%
+2026-11-19T13:05:10.8941893Z esp32:esp32@3.3.11 downloaded
+2026-11-19T13:05:10.8942302Z Installing esp32:esp-x32@2601...
+2026-11-19T13:05:22.1501381Z Skipping tool configuration....
+2026-11-19T13:05:22.1501770Z esp32:esp-x32@2601 installed
+2026-11-19T13:05:22.1502051Z Installing esp32:xtensa-esp-elf-gdb@17.1_20260402...
+2026-11-19T13:05:22.8799743Z Skipping tool configuration....
+2026-11-19T13:05:22.8800337Z esp32:xtensa-esp-elf-gdb@17.1_20260402 installed
+2026-11-19T13:05:22.8800847Z Installing esp32:esp-rv32@2601...
+2026-11-19T13:05:37.9528709Z Skipping tool configuration....
+2026-11-19T13:05:37.9529139Z esp32:esp-rv32@2601 installed
+2026-11-19T13:05:37.9529673Z Installing esp32:riscv32-esp-elf-gdb@17.1_20260402...
+2026-11-19T13:05:38.6878219Z Skipping tool configuration....
+2026-11-19T13:05:38.6878843Z esp32:riscv32-esp-elf-gdb@17.1_20260402 installed
+2026-11-19T13:05:38.6879217Z Installing esp32:openocd-esp32@v0.12.0-esp32-20260424...
+2026-11-19T13:05:38.7651198Z Skipping tool configuration....
+2026-11-19T13:05:38.7651823Z esp32:openocd-esp32@v0.12.0-esp32-20260424 installed
+2026-11-19T13:05:38.7652156Z Installing esp32:esptool_py@5.3.1...
+2026-11-19T13:05:39.0497450Z Skipping tool configuration....
+2026-11-19T13:05:39.0497989Z esp32:esptool_py@5.3.1 installed
+2026-11-19T13:05:39.0498555Z Installing esp32:mkspiffs@0.2.3...
+2026-11-19T13:05:39.0514762Z Skipping tool configuration....
+2026-11-19T13:05:39.0515245Z esp32:mkspiffs@0.2.3 installed
+2026-11-19T13:05:39.0515612Z Installing esp32:mklittlefs@4.0.2-db0513a...
+2026-11-19T13:05:39.0533179Z Skipping tool configuration....
+2026-11-19T13:05:39.0533675Z esp32:mklittlefs@4.0.2-db0513a installed
+2026-11-19T13:05:39.0534068Z Installing arduino:dfu-util@0.11.0-arduino5...
+2026-11-19T13:05:39.0918911Z Skipping tool configuration....
+2026-11-19T13:05:39.0919465Z arduino:dfu-util@0.11.0-arduino5 installed
+2026-11-19T13:05:39.0919822Z Installing esp32:esp32-libs@3.3.11...
+2026-11-19T13:05:40.0585225Z Skipping tool configuration....
+2026-11-19T13:05:40.0585612Z esp32:esp32-libs@3.3.11 installed
+2026-11-19T13:05:40.0586152Z Installing esp32:esp32c3-libs@3.3.11...
+2026-11-19T13:05:41.2252787Z Skipping tool configuration....
+2026-11-19T13:05:41.2253338Z esp32:esp32c3-libs@3.3.11 installed
+2026-11-19T13:05:41.2253720Z Installing esp32:esp32c5-libs@3.3.11...
+2026-11-19T13:05:42.7233692Z Skipping tool configuration....
+2026-11-19T13:05:42.7234112Z esp32:esp32c5-libs@3.3.11 installed
+2026-11-19T13:05:42.7234543Z Installing esp32:esp32c6-libs@3.3.11...
+2026-11-19T13:05:44.2009424Z Skipping tool configuration....
+2026-11-19T13:05:44.2009806Z esp32:esp32c6-libs@3.3.11 installed
+2026-11-19T13:05:44.2010082Z Installing esp32:esp32h2-libs@3.3.11...
+2026-11-19T13:05:45.5489686Z Skipping tool configuration....
+2026-11-19T13:05:45.5490411Z esp32:esp32h2-libs@3.3.11 installed
+2026-11-19T13:05:45.5491569Z Installing esp32:esp32p4-libs@3.3.11...
+2026-11-19T13:05:46.8446727Z Skipping tool configuration....
+2026-11-19T13:05:46.8447504Z esp32:esp32p4-libs@3.3.11 installed
+2026-11-19T13:05:46.8447817Z Installing esp32:esp32p4_es-libs@3.3.11...
+2026-11-19T13:05:48.1313675Z Skipping tool configuration....
+2026-11-19T13:05:48.1314122Z esp32:esp32p4_es-libs@3.3.11 installed
+2026-11-19T13:05:48.1314671Z Installing esp32:esp32s2-libs@3.3.11...
+2026-11-19T13:05:49.0650878Z Skipping tool configuration....
+2026-11-19T13:05:49.0651684Z esp32:esp32s2-libs@3.3.11 installed
+2026-11-19T13:05:49.0652071Z Installing esp32:esp32s3-libs@3.3.11...
+2026-11-19T13:05:50.3647596Z Skipping tool configuration....
+2026-11-19T13:05:50.3648026Z esp32:esp32s3-libs@3.3.11 installed
+2026-11-19T13:05:50.3648538Z Installing platform esp32:esp32@3.3.11...
+2026-11-19T13:05:50.7544054Z Skipping platform configuration....
+2026-11-19T13:05:50.7544845Z Platform esp32:esp32@3.3.11 installed
+2026-11-19T13:05:50.8778305Z ##[group]Run set -euo pipefail
+2026-11-19T13:05:50.8778632Z [36;1mset -euo pipefail[0m
+2026-11-19T13:05:50.8779063Z [36;1mmapfile -t ino_files < <(find "examples/arduino/examples/01_gfx_helloworld" -maxdepth 1 -name "*.ino" | sort)[0m
+2026-11-19T13:05:50.8779651Z [36;1mif [[ "${#ino_files[@]}" -eq 0 ]]; then[0m
+2026-11-19T13:05:50.8780009Z [36;1m  echo "No .ino file found in examples/arduino/examples/01_gfx_helloworld" >&2[0m
+2026-11-19T13:05:50.8780395Z [36;1m  exit 1[0m
+2026-11-19T13:05:50.8780602Z [36;1mfi[0m
+2026-11-19T13:05:50.8781127Z [36;1msketch_name="$(basename "${ino_files[0]}" .ino)"[0m
+2026-11-19T13:05:50.8781500Z [36;1mnormalized_sketch="$RUNNER_TEMP/arduino-sketches/$sketch_name"[0m
+2026-11-19T13:05:50.8781842Z [36;1mmkdir -p "$normalized_sketch"[0m
+2026-11-19T13:05:50.8782221Z [36;1mcp -R "examples/arduino/examples/01_gfx_helloworld/." "$normalized_sketch/"[0m
+2026-11-19T13:05:50.8782632Z [36;1marduino-cli compile \[0m
+2026-11-19T13:05:50.8783206Z [36;1m  --fqbn "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,FlashMode=qio,PartitionScheme=app3M_fat9M_16MB,USBMode=hwcdc,CDCOnBoot=cdc" \[0m
+2026-11-19T13:05:50.8783728Z [36;1m  --libraries examples/arduino/libraries \[0m
+2026-11-19T13:05:50.8784028Z [36;1m  --export-binaries \[0m
+2026-11-19T13:05:50.8784320Z [36;1m  --output-dir "build/01_gfx_helloworld-3.3.11" \[0m
+2026-11-19T13:05:50.8784616Z [36;1m  "$normalized_sketch"[0m
+2026-11-19T13:05:50.8806996Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-19T13:05:50.8807411Z env:
+2026-11-19T13:05:50.8807646Z   TEMPLATE_DIR: .ci-template
+2026-11-19T13:05:50.8807889Z ##[endgroup]
+2026-11-19T13:06:10.5142999Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp: In function 'void _on_apb_change(void*, apb_change_ev_t, uint32_t, uint32_t)':
+2026-11-19T13:06:10.5146554Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp:130:59: error: invalid conversion from 'long unsigned int' to 'spi_t*' {aka 'spi_struct_t*'} [-fpermissive]
+2026-11-19T13:06:10.5164357Z   130 |     _spi->dev->clock.val = spiFrequencyToClockDiv(old_apb / ((_spi->dev->clock.clkdiv_pre + 1) * (_spi->dev->clock.clkcnt_n + 1)));
+2026-11-19T13:06:10.5165293Z       |                                                   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-11-19T13:06:10.5165933Z       |                                                           |
+2026-11-19T13:06:10.5166510Z       |                                                           long unsigned int
+2026-11-19T13:06:10.5167771Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp:130:50: error: too few arguments to function 'uint32_t spiFrequencyToClockDiv(spi_t*, uint32_t)'
+2026-11-19T13:06:10.5169237Z   130 |     _spi->dev->clock.val = spiFrequencyToClockDiv(old_apb / ((_spi->dev->clock.clkdiv_pre + 1) * (_spi->dev->clock.clkcnt_n + 1)));
+2026-11-19T13:06:10.5170055Z       |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2026-11-19T13:06:10.5171182Z In file included from /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/esp32-hal.h:121,
+2026-11-19T13:06:10.5172027Z                  from /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/Arduino.h:44,
+2026-11-19T13:06:10.5173040Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/Arduino_DataBus.h:8,
+2026-11-19T13:06:10.5174273Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.h:3,
+2026-11-19T13:06:10.5175758Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp:5:
+2026-11-19T13:06:10.5177066Z /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/esp32-hal-spi.h:143:10: note: declared here
+2026-11-19T13:06:10.5177815Z   143 | uint32_t spiFrequencyToClockDiv(spi_t *spi, uint32_t freq);
+2026-11-19T13:06:10.5178292Z       |          ^~~~~~~~~~~~~~~~~~~~~~
+2026-11-19T13:06:10.5185783Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp: In member function 'virtual bool Arduino_ESP32SPI::begin(int32_t, int8_t)':
+2026-11-19T13:06:10.5187703Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp:177:35: error: invalid conversion from 'int32_t' {aka 'long int'} to 'spi_t*' {aka 'spi_struct_t*'} [-fpermissive]
+2026-11-19T13:06:10.5189022Z   177 |     _div = spiFrequencyToClockDiv(_speed);
+2026-11-19T13:06:10.5189433Z       |                                   ^~~~~~
+2026-11-19T13:06:10.5189856Z       |                                   |
+2026-11-19T13:06:10.5190243Z       |                                   int32_t {aka long int}
+2026-11-19T13:06:10.5202090Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPI.cpp:177:34: error: too few arguments to function 'uint32_t spiFrequencyToClockDiv(spi_t*, uint32_t)'
+2026-11-19T13:06:10.5203450Z   177 |     _div = spiFrequencyToClockDiv(_speed);
+2026-11-19T13:06:10.5203873Z       |            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2026-11-19T13:06:10.5204552Z /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/esp32-hal-spi.h:143:10: note: declared here
+2026-11-19T13:06:10.5205332Z   143 | uint32_t spiFrequencyToClockDiv(spi_t *spi, uint32_t freq);
+2026-11-19T13:06:10.5205843Z       |          ^~~~~~~~~~~~~~~~~~~~~~
+2026-11-19T13:06:10.6228789Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPIDMA.cpp: In member function 'virtual bool Arduino_ESP32SPIDMA::begin(int32_t, int8_t)':
+2026-11-19T13:06:10.6230192Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPIDMA.cpp:63:35: error: invalid conversion from 'int32_t' {aka 'long int'} to 'spi_t*' {aka 'spi_struct_t*'} [-fpermissive]
+2026-11-19T13:06:10.6231222Z    63 |     _div = spiFrequencyToClockDiv(_speed);
+2026-11-19T13:06:10.6231527Z       |                                   ^~~~~~
+2026-11-19T13:06:10.6231825Z       |                                   |
+2026-11-19T13:06:10.6232123Z       |                                   int32_t {aka long int}
+2026-11-19T13:06:10.6232895Z /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPIDMA.cpp:63:34: error: too few arguments to function 'uint32_t spiFrequencyToClockDiv(spi_t*, uint32_t)'
+2026-11-19T13:06:10.6233695Z    63 |     _div = spiFrequencyToClockDiv(_speed);
+2026-11-19T13:06:10.6233995Z       |            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+2026-11-19T13:06:10.6234446Z In file included from /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/esp32-hal.h:121,
+2026-11-19T13:06:10.6235004Z                  from /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/Arduino.h:44,
+2026-11-19T13:06:10.6235659Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/Arduino_DataBus.h:8,
+2026-11-19T13:06:10.6236832Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPIDMA.h:3,
+2026-11-19T13:06:10.6237738Z                  from /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino/src/databus/Arduino_ESP32SPIDMA.cpp:1:
+2026-11-19T13:06:10.6238548Z /home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/cores/esp32/esp32-hal-spi.h:143:10: note: declared here
+2026-11-19T13:06:10.6239058Z   143 | uint32_t spiFrequencyToClockDiv(spi_t *spi, uint32_t freq);
+2026-11-19T13:06:10.6239372Z       |          ^~~~~~~~~~~~~~~~~~~~~~
+2026-11-19T13:06:11.0901627Z Error during build: exit status 1
+2026-11-19T13:06:11.0902042Z 
+2026-11-19T13:06:11.0902536Z [92mUsed library[0m            [92mVersion[0m [90mPath[0m
+2026-11-19T13:06:11.0903247Z [93mGFX Library for Arduino[0m 1.5.9   [90m/home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/examples/arduino/libraries/GFX_Library_for_Arduino[0m
+2026-11-19T13:06:11.0904049Z [93mSPI[0m                     3.3.11  [90m/home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/libraries/SPI[0m
+2026-11-19T13:06:11.0904673Z [93mWire[0m                    3.3.11  [90m/home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11/libraries/Wire[0m
+2026-11-19T13:06:11.0905036Z 
+2026-11-19T13:06:11.0905188Z [92mUsed platform[0m [92mVersion[0m [90mPath[0m
+2026-11-19T13:06:11.0905659Z [93mesp32:esp32[0m   3.3.11  [90m/home/runner/.arduino15/packages/esp32/hardware/esp32/3.3.11[0m
+2026-11-19T13:06:11.0928178Z ##[error]Process completed with exit code 1.
+2026-11-19T13:06:11.1032564Z Post job cleanup.
+2026-11-19T13:06:11.1649945Z [command]/usr/bin/git version
+2026-11-19T13:06:11.1678828Z git version 2.56.1
+2026-11-19T13:06:11.1701680Z Temporarily overriding HOME='/home/runner/work/_temp/ed049da1-8a1e-4cca-aa3c-f98fff4b23a5' before making global git config changes
+2026-11-19T13:06:11.1702754Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:06:11.1705185Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47/.ci-template
+2026-11-19T13:06:11.1732835Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:06:11.1755132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:06:11.1947513Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:06:11.1963565Z http.https://github.com/.extraheader
+2026-11-19T13:06:11.1970006Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-19T13:06:11.1991892Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:06:11.2189895Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:06:11.2212732Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:06:11.2502846Z Post job cleanup.
+2026-11-19T13:06:11.3218580Z [command]/usr/bin/git version
+2026-11-19T13:06:11.3262262Z git version 2.56.1
+2026-11-19T13:06:11.3289409Z Temporarily overriding HOME='/home/runner/work/_temp/22f64a8c-4909-405d-a77f-cc2fe6b766d1' before making global git config changes
+2026-11-19T13:06:11.3290510Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T13:06:11.3294252Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ESP32-S3-Touch-LCD-1.47/ESP32-S3-Touch-LCD-1.47
+2026-11-19T13:06:11.3321289Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T13:06:11.3347275Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T13:06:11.3568719Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T13:06:11.3571288Z http.https://github.com/.extraheader
+2026-11-19T13:06:11.3588787Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-19T13:06:11.3590182Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T13:06:11.3776701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T13:06:11.3803198Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T13:06:11.4071046Z Cleaning up orphan processes
+2026-11-19T13:06:11.4312912Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
