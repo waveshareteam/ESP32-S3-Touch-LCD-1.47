@@ -6,8 +6,8 @@ ESP32-S3 1.47 英寸 172 × 320 电容触摸显示开发板，搭载 JD9853 SPI 
 
 | 开发框架 | 版本 | 示例数 |
 | --- | --- | ---: |
-| ESP-IDF | v5.5.4 | 5 个 ESP-IDF 工程和 1 个出厂工程 |
-| Arduino-ESP32 | 3.3.11 | 6 个 Arduino 草图 |
+| ESP-IDF | v5.4.0 | 5 个 ESP-IDF 工程和 1 个出厂工程 |
+| Arduino-ESP32 | 3.0.0 | 6 个 Arduino 草图 |
 
 ## 快速开始
 
@@ -52,3 +52,4 @@ ESP32-S3 1.47 英寸 172 × 320 电容触摸显示开发板，搭载 JD9853 SPI 
 ## 许可证
 
 Apache License 2.0，详见 [LICENSE](LICENSE)。第三方组件保留其目录中的原许可证。
+

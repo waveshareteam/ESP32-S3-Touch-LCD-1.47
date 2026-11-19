@@ -6,8 +6,8 @@
 
 | Framework | Version | Examples |
 | --- | --- | ---: |
-| ESP-IDF | v5.5.4 | 5 ESP-IDF projects plus the factory project |
-| Arduino-ESP32 | 3.3.11 | 6 Arduino sketches |
+| ESP-IDF | v5.4.0 | 5 ESP-IDF projects plus the factory project |
+| Arduino-ESP32 | 3.0.0 | 6 Arduino sketches |
 
 ## Quick Start
 
@@ -52,3 +52,4 @@ Libraries used by the sketches are bundled in [examples/arduino/libraries](examp
 ## License
 
 Apache License 2.0. See [LICENSE](LICENSE). Third-party components retain the licenses in their own directories.
+

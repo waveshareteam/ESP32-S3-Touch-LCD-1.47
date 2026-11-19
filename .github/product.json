@@ -4,10 +4,11 @@
   "product_url": "https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm",
   "tier": 1,
   "target": "esp32s3",
-  "esp_idf": { "versions": ["v5.5.4"] },
+  "esp_idf": { "versions": ["v5.4.0"] },
   "arduino": {
-    "core": "3.3.11",
-    "fqbn": "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,FlashMode=qio,PartitionScheme=app3M_fat9M_16MB,USBMode=hwcdc,CDCOnBoot=cdc"
+    "core": "3.0.0",
+    "fqbn": "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,FlashMode=qio,PartitionScheme=default_16MB,USBMode=hwcdc,CDCOnBoot=cdc"
   },
-  "factory_firmware": { "esp_idf": "v5.5.4" }
+  "factory_firmware": { "esp_idf": "v5.4.0" }
 }
+
