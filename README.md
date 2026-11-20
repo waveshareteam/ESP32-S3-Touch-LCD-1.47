@@ -2,10 +2,12 @@
   <h1>ESP32-S3-Touch-LCD-1.47</h1>
   <p><strong>ESP32-S3 1.47-inch 172 × 320 capacitive touch display board</strong></p>
   <p><strong>English</strong> | <a href="README_ZH.md">简体中文</a></p>
-  <p><a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml"><img alt="Build" src="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml/badge.svg"></a></p>
+  <p><a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml"><img alt="Build" src="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml/badge.svg"></a> <a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/releases/latest"><img alt="Latest Release" src="https://img.shields.io/github/v/release/waveshareteam/ESP32-S3-Touch-LCD-1.47"></a> <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/waveshareteam/ESP32-S3-Touch-LCD-1.47"></a></p>
   <p><a href="https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm">🛒 Product</a> · <a href="firmware/">📦 Firmware</a> · <a href="examples/esp-idf/">🧩 ESP-IDF</a> · <a href="examples/arduino/examples/">🔧 Arduino</a> · <a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47">📖 Documentation</a></p>
   <p><img src="docs/images/esp32-s3-touch-lcd-1.47.jpg" alt="ESP32-S3-Touch-LCD-1.47 development board" width="500"></p>
 </div>
+
+---
 
 ## ✨ Overview
 
@@ -39,7 +41,6 @@ See the ESP-IDF and Arduino example directories for build instructions. The fact
 
 - [Product page](https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm)
 - [Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
-- [Schematic](hardware/schematic/)
 
 ## 🤝 Support
 
@@ -49,6 +50,9 @@ See the ESP-IDF and Arduino example directories for build instructions. The fact
 ## 📄 License
 
 Apache License 2.0. See [LICENSE](LICENSE).
+
+
+
 
 
 
