@@ -1,56 +1,39 @@
-# ESP32-S3-Touch-LCD-1.47
+<div align="center">
+  <h1>ESP32-S3-Touch-LCD-1.47</h1>
+  <p><strong>ESP32-S3 1.47 英寸 172 × 320 电容触摸显示开发板</strong></p>
+  <p><a href="README.md">English</a> | <strong>简体中文</strong></p>
+  <p><a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml"><img alt="构建" src="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml/badge.svg"></a></p>
+  <p><a href="https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm">🛒 产品</a> · <a href="firmware/">📦 固件</a> · <a href="examples/esp-idf/">🧩 ESP-IDF</a> · <a href="examples/arduino/examples/">🔧 Arduino</a> · <a href="https://docs.waveshare.net/ESP32-S3-Touch-LCD-1.47/">📖 文档</a></p>
+  <p><img src="docs/images/esp32-s3-touch-lcd-1.47.jpg" alt="ESP32-S3-Touch-LCD-1.47 开发板" width="500"></p>
+</div>
 
-[English](README.md) | [简体中文](README_ZH.md)
+## ✨ 概述
 
-ESP32-S3 1.47 英寸 172 × 320 电容触摸显示开发板，搭载 JD9853 SPI 显示控制器、AXS5106L I2C 触摸控制器、16 MB Flash、8 MB PSRAM 和 TF 卡槽。
+本开发板采用 ESP32-S3，配备 JD9853 SPI 显示、AXS5106L I2C 触摸、16 MB Flash、8 MB PSRAM 和 TF 卡槽。本仓库包含 ESP-IDF、Arduino 示例、出厂源码和实测固件。
 
-| 开发框架 | 版本 | 示例数 |
-| --- | --- | ---: |
-| ESP-IDF | v5.5.4 | 5 个 ESP-IDF 工程和 1 个出厂工程 |
-| Arduino-ESP32 | 3.0.0 | 6 个 Arduino 草图 |
+## 📦 快速开始
 
-## 快速开始
+从[固件目录](firmware/)下载镜像并从 `0x0` 烧录。出厂恢复固件为 [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](firmware/ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin)。
 
-从 [固件目录](firmware/) 下载可直接烧录的镜像，或按单个示例的说明从源码构建。
+## 🧪 示例
 
-## 示例
+示例位于 [ESP-IDF](examples/esp-idf/) 和 [Arduino](examples/arduino/examples/)，出厂源码位于 [examples/factory](examples/factory/)。
 
-### ESP-IDF
+## 🛠️ 开发环境
 
-| 示例 | 主要功能 |
-| --- | --- |
-| [01_factory](examples/factory/) | 完整的出厂 LVGL 界面 |
-| [02_sd_card_test](examples/esp-idf/02_sd_card_test/) | SD 卡读写测试 |
-| [03_lvgl_example](examples/esp-idf/03_lvgl_example/) | LVGL 界面和触摸 |
-| [04_lvgl_image](examples/esp-idf/04_lvgl_image/) | LVGL 图片显示 |
-| [05_lvgl_sd_image](examples/esp-idf/05_lvgl_sd_image/) | 从 TF 卡加载 LVGL 图片 |
+ESP-IDF v5.5.4，Arduino-ESP32 3.0.0。
 
-### Arduino
-
-| 示例 | 主要功能 |
-| --- | --- |
-| [01_gfx_helloworld](examples/arduino/examples/01_gfx_helloworld/) | Arduino_GFX 显示和文字 |
-| [02_sd_card_test](examples/arduino/examples/02_sd_card_test/) | TF 卡访问 |
-| [03_lvgl_arduino_v8](examples/arduino/examples/03_lvgl_arduino_v8/) | LVGL v8 界面 |
-| [04_lvgl_battery](examples/arduino/examples/04_lvgl_battery/) | 电池信息界面 |
-| [05_lvgl_brightness](examples/arduino/examples/05_lvgl_brightness/) | 背光亮度界面 |
-| [06_lvgl_image](examples/arduino/examples/06_lvgl_image/) | LVGL 图片显示 |
-
-草图使用的库随仓库提供，位于 [examples/arduino/libraries](examples/arduino/libraries/)。
-
-## 资料
+## 📚 资料
 
 - [产品页](https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm)
-- [产品 Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
-- [中文文档](https://docs.waveshare.net/ESP32-S3-Touch-LCD-1.47/)
+- [中文 Wiki](https://docs.waveshare.net/ESP32-S3-Touch-LCD-1.47/)
+- [原理图](hardware/schematic/)
 
-## 支持
+## 🤝 支持
 
-- 示例或仓库问题：[提交 issue](https://gitee.com/waveshare/ESP32-S3-Touch-LCD-1.47/issues)。
-- 产品使用、硬件或订单问题：[微雪技术支持](https://service.waveshare.com/)。
+- [提交问题](https://gitee.com/waveshare/ESP32-S3-Touch-LCD-1.47/issues)
+- [微雪技术支持](https://service.waveshare.com/)
 
-## 许可证
+## 📄 许可证
 
-Apache License 2.0，详见 [LICENSE](LICENSE)。第三方组件保留其目录中的原许可证。
-
-
+Apache License 2.0，详见 [LICENSE](LICENSE)。
