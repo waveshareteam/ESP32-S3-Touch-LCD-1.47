@@ -33,7 +33,7 @@ See the ESP-IDF and Arduino example directories for build instructions. The fact
 | Framework | Version | Examples |
 | --- | --- | ---: |
 | ESP-IDF | v5.5.4 | 5 projects plus factory |
-| Arduino-ESP32 | 3.0.0 | 6 sketches |
+| Arduino-ESP32 | 3.3.11 | 6 sketches |
 
 ## 📚 Resources
 
@@ -49,3 +49,4 @@ See the ESP-IDF and Arduino example directories for build instructions. The fact
 ## 📄 License
 
 Apache License 2.0. See [LICENSE](LICENSE).
+
