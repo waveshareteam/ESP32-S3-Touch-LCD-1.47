@@ -21,7 +21,7 @@
 
 ## 🛠️ 开发环境
 
-ESP-IDF v5.5.4，Arduino-ESP32 3.3.11。
+ESP-IDF v5.4.4，Arduino-ESP32 3.3.11。
 
 ## 📚 资料
 
@@ -37,4 +37,5 @@ ESP-IDF v5.5.4，Arduino-ESP32 3.3.11。
 ## 📄 许可证
 
 Apache License 2.0，详见 [LICENSE](LICENSE)。
+
 

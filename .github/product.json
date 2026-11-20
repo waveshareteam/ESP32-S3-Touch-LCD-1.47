@@ -6,7 +6,7 @@
   "target": "esp32s3",
   "esp_idf": {
     "versions": [
-      "v5.5.4"
+      "v5.4.4"
     ]
   },
   "arduino": {
@@ -14,6 +14,6 @@
     "fqbn": "esp32:esp32:esp32s3:FlashSize=16M,PSRAM=opi,FlashMode=qio,PartitionScheme=app3M_fat9M_16MB,USBMode=hwcdc,CDCOnBoot=cdc"
   },
   "factory_firmware": {
-    "esp_idf": "v5.5.4"
+    "esp_idf": "v5.4.4"
   }
 }
