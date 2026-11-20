@@ -1,22 +1,58 @@
-# Factory Firmware
+<div align="center">
+  <h1>ESP32-S3-Touch-LCD-1.47</h1>
+  <p><strong>ESP32-S3 1.47-inch 172 × 320 capacitive touch display board</strong></p>
+  <p><strong>English</strong> | <a href="README_ZH.md">简体中文</a></p>
+  <p><a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml"><img alt="Build" src="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml/badge.svg"></a> <a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/releases/latest"><img alt="Latest Release" src="https://img.shields.io/github/v/release/waveshareteam/ESP32-S3-Touch-LCD-1.47"></a> <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/waveshareteam/ESP32-S3-Touch-LCD-1.47"></a></p>
+  <p><a href="https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm">🛒 Product</a> · <a href="firmware/">📦 Firmware</a> · <a href="examples/esp-idf/">🧩 ESP-IDF</a> · <a href="examples/arduino/examples/">🔧 Arduino</a> · <a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47">📖 Documentation</a></p>
+  <p><img src="docs/images/esp32-s3-touch-lcd-1.47.jpg" alt="ESP32-S3-Touch-LCD-1.47 development board" width="500"></p>
+</div>
 
-[中文](./README_ZH.md)
+---
 
-| File | Purpose |
+## ✨ Overview
+
+A compact ESP32-S3 board with JD9853 SPI display, AXS5106L I2C touch controller, 16 MB Flash, 8 MB PSRAM and TF card slot. This repository provides ESP-IDF and Arduino examples, factory source and tested firmware images.
+
+| Feature | Device / interface |
 | --- | --- |
-| [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin) | Factory recovery firmware dated 2025-05-08. Flash from `0x0`. |
+| MCU | ESP32-S3 |
+| Memory | 16 MB Flash, 8 MB PSRAM |
+| Display | 1.47-inch 172 × 320, JD9853 SPI |
+| Touch | AXS5106L I2C capacitive touch |
 
-Before flashing:
+## 📦 Quick Start
 
-- Back up device-specific data that must be preserved.
-- Confirm the board model and hardware revision.
-- Follow the offset and flashing procedure in the product documentation for this image. Do not infer the factory image from a source build.
-- Do not mix this image with a bootloader or partition file built for another project.
+Download a tested image from the [firmware directory](firmware/) and flash it at `0x0`. Install the required framework version listed below when building examples from source.
 
-This image was verified on the corresponding product with Flash Download Tool. SHA-256: `E582744F9E1AEBC7550F46F4B5B221CC184D1EAD3FC8C28201B5A550AB020BE9`.
+Factory recovery firmware is [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](firmware/ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin).
 
-See the [firmware guide](https://github.com/waveshareteam/esp32-repo-template/blob/main/docs/spec.md) for the difference between factory firmware and source-build firmware.
+## 🧪 Examples
 
-## Update the Factory Image
+See the ESP-IDF and Arduino example directories for build instructions. The factory source is in [examples/factory](examples/factory/).
 
-Replacing a factory binary is a development operation. Record its source, expected hardware revision, flashing procedure, checksum, and user-visible version in the Pull Request. Never overwrite an existing image with an unrelated local build.
+## 🛠️ Development Environment
+
+| Framework | Version | Examples |
+| --- | --- | ---: |
+| ESP-IDF | v5.4.4 | 5 projects plus factory |
+| Arduino-ESP32 | 3.1.1 | 6 sketches |
+
+## 📚 Resources
+
+- [Product page](https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm)
+- [Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
+
+## 🤝 Support
+
+- [Open an issue](https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/issues/new/choose)
+- [Waveshare support](https://service.waveshare.com/)
+
+## 📄 License
+
+Apache License 2.0. See [LICENSE](LICENSE).
+
+
+
+
+
+
