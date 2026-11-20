@@ -1,56 +1,51 @@
-# ESP32-S3-Touch-LCD-1.47
+<div align="center">
+  <h1>ESP32-S3-Touch-LCD-1.47</h1>
+  <p><strong>ESP32-S3 1.47-inch 172 × 320 capacitive touch display board</strong></p>
+  <p><strong>English</strong> | <a href="README_ZH.md">简体中文</a></p>
+  <p><a href="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml"><img alt="Build" src="https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/actions/workflows/build.yml/badge.svg"></a></p>
+  <p><a href="https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm">🛒 Product</a> · <a href="firmware/">📦 Firmware</a> · <a href="examples/esp-idf/">🧩 ESP-IDF</a> · <a href="examples/arduino/examples/">🔧 Arduino</a> · <a href="https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47">📖 Documentation</a></p>
+  <p><img src="docs/images/esp32-s3-touch-lcd-1.47.jpg" alt="ESP32-S3-Touch-LCD-1.47 development board" width="500"></p>
+</div>
 
-[English](README.md) | [简体中文](README_ZH.md)
+## ✨ Overview
 
-1.47-inch 172 × 320 capacitive touch display board for ESP32-S3 with a JD9853 SPI display, AXS5106L I2C touch controller, 16 MB Flash, 8 MB PSRAM and a TF card slot.
+A compact ESP32-S3 board with JD9853 SPI display, AXS5106L I2C touch controller, 16 MB Flash, 8 MB PSRAM and TF card slot. This repository provides ESP-IDF and Arduino examples, factory source and tested firmware images.
+
+| Feature | Device / interface |
+| --- | --- |
+| MCU | ESP32-S3 |
+| Memory | 16 MB Flash, 8 MB PSRAM |
+| Display | 1.47-inch 172 × 320, JD9853 SPI |
+| Touch | AXS5106L I2C capacitive touch |
+
+## 📦 Quick Start
+
+Download a tested image from the [firmware directory](firmware/) and flash it at `0x0`. Install the required framework version listed below when building examples from source.
+
+Factory recovery firmware is [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](firmware/ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin).
+
+## 🧪 Examples
+
+See the ESP-IDF and Arduino example directories for build instructions. The factory source is in [examples/factory](examples/factory/).
+
+## 🛠️ Development Environment
 
 | Framework | Version | Examples |
 | --- | --- | ---: |
-| ESP-IDF | v5.5.4 | 5 ESP-IDF projects plus the factory project |
-| Arduino-ESP32 | 3.0.0 | 6 Arduino sketches |
+| ESP-IDF | v5.5.4 | 5 projects plus factory |
+| Arduino-ESP32 | 3.0.0 | 6 sketches |
 
-## Quick Start
-
-Download a ready-to-flash image from the [firmware directory](firmware/), or follow an individual example guide to build from source.
-
-## Examples
-
-### ESP-IDF
-
-| Example | Main feature |
-| --- | --- |
-| [01_factory](examples/factory/) | Complete factory LVGL interface |
-| [02_sd_card_test](examples/esp-idf/02_sd_card_test/) | SD card read and write test |
-| [03_lvgl_example](examples/esp-idf/03_lvgl_example/) | LVGL interface and touch |
-| [04_lvgl_image](examples/esp-idf/04_lvgl_image/) | LVGL image display |
-| [05_lvgl_sd_image](examples/esp-idf/05_lvgl_sd_image/) | LVGL images loaded from a TF card |
-
-### Arduino
-
-| Example | Main feature |
-| --- | --- |
-| [01_gfx_helloworld](examples/arduino/examples/01_gfx_helloworld/) | Arduino_GFX display and text |
-| [02_sd_card_test](examples/arduino/examples/02_sd_card_test/) | TF card access |
-| [03_lvgl_arduino_v8](examples/arduino/examples/03_lvgl_arduino_v8/) | LVGL v8 interface |
-| [04_lvgl_battery](examples/arduino/examples/04_lvgl_battery/) | Battery information UI |
-| [05_lvgl_brightness](examples/arduino/examples/05_lvgl_brightness/) | Backlight brightness UI |
-| [06_lvgl_image](examples/arduino/examples/06_lvgl_image/) | LVGL image display |
-
-Libraries used by the sketches are bundled in [examples/arduino/libraries](examples/arduino/libraries/).
-
-## Resources
+## 📚 Resources
 
 - [Product page](https://www.waveshare.com/ESP32-S3-Touch-LCD-1.47.htm)
-- [Product Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
-- [Chinese documentation](https://docs.waveshare.net/ESP32-S3-Touch-LCD-1.47/)
+- [Wiki](https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-1.47)
+- [Schematic](hardware/schematic/)
 
-## Support
+## 🤝 Support
 
-- Example or repository problem: [open an issue](https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/issues/new/choose).
-- Product usage, hardware or order questions: [Waveshare support](https://service.waveshare.com/).
+- [Open an issue](https://github.com/waveshareteam/ESP32-S3-Touch-LCD-1.47/issues/new/choose)
+- [Waveshare support](https://service.waveshare.com/)
 
-## License
+## 📄 License
 
-Apache License 2.0. See [LICENSE](LICENSE). Third-party components retain the licenses in their own directories.
-
-
+Apache License 2.0. See [LICENSE](LICENSE).
