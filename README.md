@@ -30,6 +30,8 @@ Factory recovery firmware is [ESP32-S3-Touch-LCD-1.47_FactoryOnly_20250508.bin](
 
 See the ESP-IDF and Arduino example directories for build instructions. The factory source is in [examples/factory](examples/factory/).
 
+[Factory Demo](examples/esp-idf/01_factory/) exercises the touchscreen, backlight, and Wi-Fi scanning.
+
 ## 🛠️ Development Environment
 
 | Framework | Version | Examples |
