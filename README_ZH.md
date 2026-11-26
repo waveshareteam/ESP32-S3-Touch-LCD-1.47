@@ -21,6 +21,8 @@
 
 示例位于 [ESP-IDF](examples/esp-idf/) 和 [Arduino](examples/arduino/examples/)，出厂源码位于 [examples/factory](examples/factory/)。
 
+[出厂功能演示](examples/esp-idf/01_factory/README_ZH.md)展示触摸测试、背光调节和 Wi-Fi 扫描。
+
 ## 🛠️ 开发环境
 
 ESP-IDF v5.4.4，Arduino-ESP32 3.1.1。
